@@ -1,0 +1,41 @@
+div.bigimg{width: 100%;
+  height: 690px;
+  background: url(banner_img.jpg);
+  box-sizing: border-box;
+  border-left: 1px solid #938e8c;
+  border-right: 1px solid #983e8c;
+  border-bottom: 1px solid #983e8c;
+  position: relative;}
+
+.bigimg p{color: #ffffff;
+  font-family: Microsoft YaHei;
+  }
+
+.bigimg .no1{font-size: 60px; 
+  height: 60px;
+  line-height: 60px;
+  padding-left: 116px;
+  padding-top: 225px;}
+
+.bigimg .no2{font-size: 21px;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 123px;
+  padding-top: 31px;}
+
+.bigimg .no3{font-size: 21px;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 123px;
+  padding-top: 11px;}
+
+.bigimg .no4{font-size: 30px;
+  height: 63px;
+  line-height: 63px;
+  text-align: center;
+  width: 330px;
+  background-color: #e74f4d;
+  margin-left: 125px;
+  margin-top: 67px;}
+
+.bigimg .no4 a{color: #ffffff;}

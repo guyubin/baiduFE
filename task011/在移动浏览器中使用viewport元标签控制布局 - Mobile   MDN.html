@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag -->
+<html lang="zh-CN" dir="ltr" class="redesign " data-ffo-opensanslight="true" data-ffo-opensans="true"><head prefix="og: http://ogp.me/ns#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>在移动浏览器中使用viewport元标签控制布局 - Mobile | MDN</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="home" href="https://developer.mozilla.org/zh-CN/">
+  <link rel="copyright" href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#copyright">
+
+  
+    
+    
+    <link href="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/mdn.65be1fdadb40.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/wiki.ad38740e3609.css" rel="stylesheet" type="text/css">
+
+    
+
+
+  <!-- common social tags -->
+  
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta property="og:site_name" content="Mozilla 开发者网络">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta name="twitter:site" content="@MozDevNet">
+  <meta name="twitter:creator" content="@MozDevNet">
+
+  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/zh-CN/search/xml" title="Mozilla 开发者网络">
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag$json">
+  <link rel="canonical" href="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN.html">
+
+  
+    
+      <link rel="alternate" hreflang="en-US" href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Mozilla/Mobile/Balise_meta_viewport" title="Utiliser la balise meta viewport pour contrôler la mise en page sur les navigateurs mobiles">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Mobile/Viewport_meta_tag" title="Usando a meta tag viewport para controlar o layout em navegadores de dispositivos móveis">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag" title="Usando la etiqueta meta viewport para controlar la composición en los navegadores móviles">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Mozilla/Mobile/Viewport_meta_tag" title="viewport meta 태그를 이용해 모바일 브라우저상에서 레이아웃 조종하는 법">
+    
+      <link rel="alternate" hreflang="ro" href="https://developer.mozilla.org/ro/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Mobile/Viewport_meta_tag" title="モバイルブラウザでのレイアウトを制御するために meta タグの viewport を使う">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Mozilla/Mobile/Viewport_meta_tag" title="Kontrola układu strony na urządzeniach mobilnych przy pomocy właściwości viewport znacznika meta">
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="在移动浏览器中使用viewport元标签控制布局">
+  <meta property="og:url" content="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag">
+  <meta name="twitter:url" content="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag">
+  <meta name="twitter:title" content="在移动浏览器中使用viewport元标签控制布局">
+  
+  <meta property="og:description" content="Mobile Firefox (Fennec) 1.1 增强了对 meta name=&quot;viewport&quot; 标签的支持。 此前版本的 Fennec支持 width、 height 及 initial-scale这些 viewport属性，然而对于针对iPhone及Android浏览器设计的站点的支持存在 问题 。 现在我们和Mobile Safari支持同样的属性，并且我们让Fennec在尺寸及分辨率各异的屏幕上渲染移动站点时更具一致性。">
+  <meta name="description" content="Mobile Firefox (Fennec) 1.1 增强了对 meta name=&quot;viewport&quot; 标签的支持。 此前版本的 Fennec支持 width、 height 及 initial-scale这些 viewport属性，然而对于针对iPhone及Android浏览器设计的站点的支持存在 问题 。 现在我们和Mobile Safari支持同样的属性，并且我们让Fennec在尺寸及分辨率各异的屏幕上渲染移动站点时更具一致性。">
+  <meta name="twitter:description" content="Mobile Firefox (Fennec) 1.1 增强了对 meta name=&quot;viewport&quot; 标签的支持。 此前版本的 Fennec支持 width、 height 及 initial-scale这些 viewport属性，然而对于针对iPhone及Android浏览器设计的站点的支持存在 问题 。 现在我们和Mobile Safari支持同样的属性，并且我们让Fennec在尺寸及分辨率各异的屏幕上渲染移动站点时更具一致性。">
+  
+
+
+  
+    
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36116321-5', 'mozilla.org');
+    ga('set', 'anonymizeIp', true);
+
+    
+
+    // dimension9 == "Section editing"
+    
+        // dimension12 == 'Page Revision"
+        ga('set', 'dimension12', 654245);
+
+    (function() {
+        // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+        var win = window;
+        var removeUtms = function(){
+            var location = win.location;
+            if (location.href.indexOf('utm') != -1 && win.history.replaceState) {
+                win.history.replaceState({}, '', location.pathname);
+            }
+        };
+
+        ga('send', 'pageview', {'hitCallback': removeUtms});
+    })();
+</script>
+
+  
+<script async="" data-manual="true" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/syntax-prism.7a66ddfa68bf.js"></script></head>
+<body data-slug="Mobile/Viewport_meta_tag" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'iperceptions': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = '/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/zh-CN/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.cdc2a41387bb.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+  <div class="global-notice">
+    <div class="wrap center">
+      
+        <p><bdi>Join MDN and developers like you at Mozilla's View Source conference, 12-14 September in Berlin, Germany. Learn more at <a href="https://viewsourceconf.org/">https://viewsourceconf.org</a></bdi></p>
+      
+    </div>
+  </div>
+
+
+  
+
+  <ul id="nav-access">
+    <li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#document-main" id="skip-main">跳到主要内容</a></li>
+    <li><a id="skip-language" href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#language">选择语言</a></li>
+    
+      <li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#q" id="skip-search">跳到搜索</a></li>
+    
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="https://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+
+    <a href="https://developer.mozilla.org/zh-CN/" class="logo">Mozilla 开发者网络</a>
+
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li>
+
+    
+
+    <form>
+      <div class="oauth-login-container">
+          <div class="oauth-login-options" tabindex="0">
+              <span class="oauth-login-options-text">
+                登录
+              </span>
+              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fzh-CN%2Fdocs%2FMobile%2FViewport_meta_tag" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
+          </div>
+          <div class="oauth-login-picker" aria-hidden="true">
+              <ul>
+                  <li>
+                    登录或创建账户：<br>
+                    <a href="https://developer.mozilla.org/users/github/login/?next=%2Fzh-CN%2Fdocs%2FMobile%2FViewport_meta_tag" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a>
+                  </li>
+                  <li class="wait-for-persona">
+                      登录： <a href="https://developer.mozilla.org/docs/MDN/Contribute/Persona_Sign_In_on_MDN"><i aria-hidden="true" title="为什么只有 Persona 登录？" class="icon-question-sign"></i></a><br>
+                      <a href="https://developer.mozilla.org/zh-CN/users/signin" class="login-link launch-persona-login" data-next="/zh-CN/docs/Mobile/Viewport_meta_tag" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a>
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+    </form>
+</li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web">网络平台<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">技术</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Graphics">图像</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API">API / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Apps">应用</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">参考和指引</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn">了解 Web</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Tutorials">教程</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Reference">参考文献</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide">开发者指南</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Accessibility">无障碍环境</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web">...更多文档</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/zh-CN/docs/Zones">Mozilla 文档<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons">附加组件</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox">Firefox</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Marketplace">火狐应用市场</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/B2G_OS">B2G OS</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Persona">Persona</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/zh-CN/docs/Tools">开发者工具</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/MDN/Feedback">反馈<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">获取 Firefox 帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">获取 Web 开发帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/MDN/Community">加入 MDN 社区</a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.doc">报告内容问题<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.mdn">报告缺陷<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/zh-CN/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/zh-CN/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">搜索</label>
+          <input type="search" id="main-q" name="q" placeholder="搜索" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">搜索</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+
+    <div class="wiki-main-content" id="document-main" role="main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>语言</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">English (US) (en-US)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Mozilla/Mobile/Balise_meta_viewport" title="Utiliser la balise meta viewport pour contrôler la mise en page sur les navigateurs mobiles">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Mozilla/Mobile/Viewport_meta_tag" title="Usando a meta tag viewport para controlar o layout em navegadores de dispositivos móveis">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag" title="Usando la etiqueta meta viewport para controlar la composición en los navegadores móviles">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Mozilla/Mobile/Viewport_meta_tag" title="viewport meta 태그를 이용해 모바일 브라우저상에서 레이아웃 조종하는 법">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ro/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">Română (ro)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Mobile/Viewport_meta_tag" title="モバイルブラウザでのレイアウトを制御するために meta タグの viewport を使う">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Mozilla/Mobile/Viewport_meta_tag" title="Kontrola układu strony na urządzeniach mobilnych przy pomocy właściwości viewport znacznika meta">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ar/docs/Mozilla/Mobile/Viewport_meta_tag" title="Using the viewport meta tag to control layout on mobile browsers">عربي (ar)</a></bdi></li>
+                
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">编辑<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>高级</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">高级</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag$history" rel="nofollow, noindex">历史记录</a></li>
+                
+                
+                
+
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#" onclick="return window.print();">打印此文章</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="面包屑导航">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla" rel="v:url" property="v:title">Mozilla 产品与私有技术</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN/docs/Mobile" rel="v:url" property="v:title">Mobile</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">在移动浏览器中使用viewport元标签控制布局</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="前一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">您的搜索结果</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="后一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="查看所有贡献者" data-alternate-message="隐藏贡献者">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/leolovenet@gmail.com" title="查看个人资料：leolovenet@gmail.com">
+                <img src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/5da425d3f85544909f4a4e9ff05425c1" class="avatar loaded" height="34" width="34" alt="leolovenet@gmail.com"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/NightKnight" title="查看个人资料：NightKnight">
+                <img src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/669ab8849ffbfda3337a6b6be73bcc1c" class="avatar loaded" height="34" width="34" alt="NightKnight"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/amibug" title="查看个人资料：amibug">
+                <img src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/e8b882650cb50ed18d9b8c91f15b184c" class="avatar loaded" height="34" width="34" alt="amibug"></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>在移动浏览器中使用viewport元标签控制布局</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable fixed" style="width: 246px; max-height: 613px; top: 0px;">
+                <a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus" aria-haspopup="true">在本文章中<i class="icon-minus"></i></a>
+                <ol class="toggle-container">
+                  <li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E8.83.8C.E6.99.AF" rel="internal">背景</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E8.A7.86.E5.8F.A3.E5.9F.BA.E7.A1.80" rel="internal">视口基础</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E5.83.8F.E7.B4.A0.E5.B9.B6.E9.9D.9E.E5.83.8F.E7.B4.A0" rel="internal">像素并非像素</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E8.A7.86.E5.8F.A3.E5.AE.BD.E5.BA.A6.E5.8F.8A.E5.B1.8F.E5.B9.95.E5.AE.BD.E5.BA.A6" rel="internal">视口宽度及屏幕宽度</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E6.89.8B.E6.9C.BA.E5.B9.B3.E6.9D.BF.E9.80.9A.E7.94.A8.E7.9A.84.E8.A7.86.E5.8F.A3.E5.B0.BA.E5.AF.B8" rel="internal">手机平板通用的视口尺寸</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag#.E6.A0.87.E5.87.86" rel="internal">标准</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p><a class="external link-https external-icon" href="https://wiki.mozilla.org/Mobile/Fennec" style="line-height: inherit;">Mobile Firefox (Fennec)</a><span style="line-height: inherit;"> 1.1 增强了对</span><code style="font-size: 14px; line-height: inherit;">&lt;meta name="viewport"&gt;</code><span style="line-height: inherit;">&nbsp;标签的支持。 此前版本的</span><span style="line-height: inherit;">Fennec支持</span><code style="font-size: 14px; line-height: inherit;">width、</code><code style="font-size: 14px; line-height: inherit;">height<font face="Open Sans, sans-serif">及</font></code><code style="font-size: 14px; line-height: inherit;">initial-scale这些</code><span style="line-height: inherit;">viewport属性，然而对于针对iPhone及Android浏览器设计的站点的支持存在<a class="external external-icon" href="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/" title="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/">问题</a>。</span><span style="line-height: inherit;">现在我们和Mobile Safari支持同样的属性，并且我们让Fennec在尺寸及分辨率各异的屏幕上渲染移动站点时更具一致性。</span></p>
+<p class="caption">升级前渲染的touch.facebook.com：</p>
+<p class="figure"><img alt="05-11-fennec-meta-viewport-2.png" class="internal default" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/=05-11-fennec-meta-viewport-2.png"></p>
+<p class="caption">升级后渲染的touch.facebook.com：</p>
+<p class="figure"><img alt="05-11-fennec-meta-viewport-1.png" class="internal default" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/=05-11-fennec-meta-viewport-1.png"></p>
+<p>你可以亲自在最新的<a class="external external-icon" href="http://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mobile-1.9.2/">Fennec 1.1</a>及针对Maemo、Windows、Mac或Linux的nightly<a class="external external-icon" href="http://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mobile-trunk/">分支</a>中体验到这些变化。</p>
+<h2 id=".E8.83.8C.E6.99.AF">背景</h2>
+<p>移动端浏览器（如Fennec）在一个通常比屏幕更宽的虚拟”窗口“（视口）中渲染页面，从而无需将所有页面都压缩进小屏幕里（那样会把很多没有针对移动端进行优化的站点打乱）。用户可以通过平移和缩放来浏览页面的不同区域。</p>
+<p>Mobile Safari 引入了”viewport元标签“来让web开发者控制视口的尺寸及比例。如今许多其他移动端浏览器已经支持这一标签，虽然它不是任何web标准的一部分。苹果的<a class="external external-icon" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW29" style="line-height: 1.5;">文档</a><span style="line-height: 1.5;">详尽地说明了web开发人员可以怎样使用这一标签，然而我们还是不得不仔细推敲Fennec究竟应该怎样实现它。例如，Safari的文档指出标签的内容应为”由逗号分隔的列表“，但是现有的浏览器和网页都把逗号、分号及空格混用作分隔符。</span></p>
+<p>可以在<a class="external external-icon" href="http://www.quirksmode.org/mobile/viewports2.html" title="http://www.quirksmode.org/mobile/viewports2.html">A Tale of Two Viewports</a>了解更多在不同移动浏览器中视口的情况。</p>
+<h2 id=".E8.A7.86.E5.8F.A3.E5.9F.BA.E7.A1.80">视口基础</h2>
+<p>一个典型的针对移动端优化的站点包含类似下面的内容：</p>
+<pre class="line-numbers  language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1, maximum-scale<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span></span></code></pre>
+<p><code style="font-size: 14px;">width</code>属性控制视口的宽度。可以像<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal; font-size: 14px;">width=600</span>这样设为确切的像素数，或者设为<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal; font-size: 14px;">device-width</span>这一特殊值来指代比例为100%时屏幕宽度的CSS像素数值。（相应有<code style="font-size: 14px;">height</code>及<code style="font-size: 14px;">device-height</code>属性，可能对包含基于视口高度调整大小及位置的元素的页面有用。）</p>
+<p><span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">initial-scale</span>属性控制页面最初加载时的缩放等级。<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">maximum-scale</span><span style="line-height: 1.5;">、</span><span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">minimum-scale</span><span style="line-height: 1.5;">及</span><span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">user-scalable</span><span style="line-height: 1.5;">属性控制允许用户以怎样的方式放大或缩小页面。</span></p>
+<h2 id=".E5.83.8F.E7.B4.A0.E5.B9.B6.E9.9D.9E.E5.83.8F.E7.B4.A0">像素并非像素</h2>
+<p>iPhone和许多Android手机有3*4英寸（7*10厘米）大的分辨率为320*480像素的屏幕<span style="line-height: 1.5;">（~160 dpi）。Firefox for Maemo同样运行在Nokia N900上，它的屏幕具有同样的物理尺寸有着480*800像素的分辨率（~240 dpi）。因此，过去版本的Fennec会把很多页面显示得比在iPhone或Android上小大约三分之一（物理尺寸）。这导致很多针对触屏优化的网站产生了可用性和可读性的问题。Peter-Paul Koch在</span><a class="external external-icon" href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html" style="line-height: 1.5;">A pixel is not a pixel is not a pixel</a>中提到了这一问题。</p>
+<p>针对Fennec for maemo 1.1将采取基于WebKit的Android浏览器所使用的方式，以1.5个硬件像素显示每一个CSS”像素“。这意味着一个<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">initial-scale=1</span><span style="line-height: 1.5;">的页面在Fennec for Maemo、Mobile Safari for iPhone以及Android浏览器中，无论在</span><a class="external external-icon" href="http://developer.android.com/guide/practices/screens_support.html#range" style="line-height: 1.5;">HDPI或是MDPI</a>手机上，都能显示为相近的物理尺寸。这与<a class="external external-icon" href="http://www.w3.org/TR/CSS2/syndata.html#length-units" style="line-height: 1.5;">CSS 2.1标准</a>一致：</p>
+<blockquote>
+ <p>如果显示设备的像素密度与典型的电脑显示器差异明显，用户代理应当重新调整像素值。建议像素单位指向设备所包含的所有最接近参考像素标准的像素。建议以阅读者在一臂距离处观察到的<span style="line-height: 1.5;">像素密度为96 dpi的设备上</span><span style="line-height: 1.5;">的一个像素作为</span><span style="line-height: 1.5;">参考像素</span><span style="line-height: 1.5;">。</span></p>
+</blockquote>
+<p>对web开发者来说，这意味着在所有之前提到的手持设备上，比例=1时竖屏模式的最大宽度都是320像素，并且会相应地调整布局及图片的大小。不过要记得不是所有移动设备的宽度都相同，应该确保页面在横屏模式以及iPad与Android平板等更大的设备上工作良好。</p>
+<p>在240 dpi及以上的屏幕上，<span style="color: rgb(77, 78, 83); font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">initial-scale=1</span><span style="line-height: 1.5;">的页面实际上会被Fennec及Android WebKit浏览器放大至150%。其中的文字会保持平滑锐利，但位图图像在全屏模式下就难免不尽人意了。为了使图片在这些屏幕上变得清晰，web开发者或许会把图片甚至整个布局设计成最终尺寸的150%（或者200%从而支持像配备retina屏的iPhone那样的像素密度高达320 dpi及以上的设备），然后通过CSS或视口属性缩小。</span></p>
+<p><span style="line-height: 1.5;">默认比例依赖于显示密度。在密度低于200 dpi的显示设备上，比例为1.0。在密度介于200及300 dpi之间的显示设备上，比例为1.5。对于具有300 dpi以上密度的显示设备，比例为密度/150 dpi向下取整的结果。注意再有在视口比例为1时才会应用默认比例。否则，CSS像素与设备像素之间的关系依赖于当前的缩放等级。</span></p>
+<h2 id=".E8.A7.86.E5.8F.A3.E5.AE.BD.E5.BA.A6.E5.8F.8A.E5.B1.8F.E5.B9.95.E5.AE.BD.E5.BA.A6">视口宽度及屏幕宽度</h2>
+<p>许多站点把视口设为”<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">width=320, initial-scale=1</span><span style="line-height: 1.5;">“来准确地适应iPhone在竖屏状态下的显示。如上所述，这会导致Fennec 1.0在渲染这些站点时产生</span><a class="external external-icon" href="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/" style="line-height: 1.5;">问题</a><span style="line-height: 1.5;">，尤其是横屏模式下。为了修正这个问题，Fennec 1.1将在必要时扩展视口宽度至相应的尺寸来填满屏幕。这与Android和Mobile Safari的行为一致，而这在一点像iPad这样的大屏设备上尤其有用。（Allen Pike的</span><a class="external external-icon" href="http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/" style="line-height: 1.5;">viewport for iPad sites</a><span style="line-height: 1.5;">对web开发者做了充分说明）。</span></p>
+<p>对于设置了初始或最大缩放的页面，<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; line-height: normal;">width</span><span style="line-height: 1.5;">属性实际上变成了</span><strong style="line-height: 1.5;">最小</strong><span style="line-height: 1.5;">视口宽度。比如，如果你的布局需要至少500像素的宽度，那么你可以使用以下标记。当屏幕宽度大于500像素时，浏览器会扩展视口（而不是放大页面）来适应屏幕：</span></p>
+<pre class="line-numbers  language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>500, initial-scale<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span></span></code></pre>
+<p>Fennec 1.1还增加了对<code style="font-size: 14px;">minimum-scale、</code><span style="line-height: 1.5;">&nbsp;</span><code style="font-size: 14px;">maximum-scale<font face="Open Sans, sans-serif"><span style="line-height: 21px;">以及</span></font></code><code style="font-size: 14px;">user-scalable的支持，采用与</code><a class="external external-icon" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html" style="line-height: 1.5;">Safari</a><span style="line-height: 1.5;">类似的默认值与限制。这些属性会影响初始尺寸及宽度，并且会限制缩放等级。</span></p>
+<p><span style="line-height: 1.5;">移动浏览器在处理屏幕方向改变时稍有差异。例如，Mobile Safari通常在竖屏转横屏时只缩放页面，而不会把页面重新布局成横屏载入时的效果。如果web开发者想让iPhone在方向切换时保持固定比例，需要增加一个</span><code style="font-size: 14px;">maximum-scale</code><span style="line-height: 1.5;">值来避免这样的的缩放，这会带来并非预期的禁止用户缩放页面的副作用：</span></p>
+<pre class="line-numbers  language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>initial-scale<span class="token punctuation">=</span>1, maximum-scale<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span></span></code></pre>
+<p>这在Fennec中并非必要，当设备改变方向时，Fennec会改变viewport尺寸，页面布局及Javascript/CSS属性（例如<code style="font-size: 14px;">device-width</code><span style="line-height: 1.5;">），会基于新的窗口维度。</span></p>
+<h2 id=".E6.89.8B.E6.9C.BA.E5.B9.B3.E6.9D.BF.E9.80.9A.E7.94.A8.E7.9A.84.E8.A7.86.E5.8F.A3.E5.B0.BA.E5.AF.B8">手机平板通用的视口尺寸</h2>
+<p>如果你想知道各种手机和平板设备各有怎样的视口宽度，<a class="external external-icon" href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" style="line-height: 1.5;" title="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">这里</a><span style="line-height: 1.5;">有一个手机平板视口尺寸的综合列表。它提供了一些诸如横屏及竖屏的视口宽度、物理屏幕宽度、操作系统以及像素密度的信息。</span></p>
+<h2 id=".E6.A0.87.E5.87.86">标准</h2>
+<p>既然被绝大多数流行的移动浏览器所支持、被成千上万的站点所使用，对于viewport元标签的需求是显而易见的。如果有一个能让web页面控制视口尺寸的真正的标准是极好的。根据HTML5标准，对<span style="font-family: &#39;Courier New&#39;, &#39;Andale Mono&#39;, monospace; font-weight: inherit; line-height: normal;">meta</span><span style="line-height: 1.5;">元素的扩展需要先在</span><a class="external external-icon" href="http://wiki.whatwg.org/wiki/MetaExtensions" style="line-height: 1.5;">WHATWG wiki</a><span style="line-height: 1.5;">登记，然后通过W3C标准流程。如果这成为了现实，Mozilla将全力确保我们实现了任何在标准化过程中产生的变化。</span></p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">文档标签和贡献者</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>此页面的贡献者：</strong> 
+        <a href="https://developer.mozilla.org/zh-CN/profiles/leolovenet@gmail.com">leolovenet@gmail.com</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/NightKnight">NightKnight</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/amibug">amibug</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>最后编辑者:</strong>
+                      <a href="https://developer.mozilla.org/zh-CN/profiles/leolovenet@gmail.com">leolovenet@gmail.com</a>,
+                      <time datetime="2014-08-18T20:15:22-07:00">Aug 18, 2014, 8:15:22 PM</time>
+                    </div>
+                  
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/zh-CN/docs/Mobile/Viewport_meta_tag$edit" label="编辑页面"></menuitem>
+    <menuitem data-action="/zh-CN/docs/Mobile/Viewport_meta_tag$history" label="查看页面历史"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2016 Mozilla 开发者网络及各贡献者</p> <p>内容可按<a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">这些许可协议</a>使用。</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">关于 MDN</a></li>
+            <li><a href="https://www.mozilla.org/about/legal/terms/mozilla">条款</a></li>
+            <li><a href="https://www.mozilla.org/privacy/websites/">隐私</a></li>
+            <li><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookie</a></li>
+            <li><a href="https://github.com/mozilla/kuma">贡献代码</a></li>
+          </ul>
+        <p></p>
+        
+        </div>
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/zh-CN/docs/Web">
+      <label for="language">其他语言：</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option value="/zh-CN/docs/Mobile/Viewport_meta_tag" selected="">
+          中文 (简体)
+        </option>
+        
+          <option value="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">
+            English (US)
+          </option>
+          <option value="/fr/docs/Mozilla/Mobile/Balise_meta_viewport">
+            Français
+          </option>
+          <option value="/pt-BR/docs/Mozilla/Mobile/Viewport_meta_tag">
+            Português (do&nbsp;Brasil)
+          </option>
+          <option value="/es/docs/M%C3%B3vil/Viewport_meta_tag">
+            Español
+          </option>
+          <option value="/ko/docs/Mozilla/Mobile/Viewport_meta_tag">
+            한국어
+          </option>
+          <option value="/ro/docs/Mozilla/Mobile/Viewport_meta_tag">
+            Română
+          </option>
+          <option value="/ja/docs/Mobile/Viewport_meta_tag">
+            日本語
+          </option>
+          <option value="/pl/docs/Mozilla/Mobile/Viewport_meta_tag">
+            Polski
+          </option>
+          <option value="/ar/docs/Mozilla/Mobile/Viewport_meta_tag">
+            عربي
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;转到&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="https://login.persona.org/include.js">
+  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
+  <input type="hidden" name="next" value="" id="_persona_next_url">
+  <input type="hidden" name="process" value="" id="_persona_process">
+  <input type="hidden" name="assertion" id="_persona_assertion">
+</form>
+
+
+    <script type="text/javascript" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/main.a7b27a25fb9c.js" charset="utf-8"></script>
+
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+
+    
+    <script type="text/javascript" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/javascript.96f0e0a752fb.js"></script>
+  
+    <script async="" type="text/javascript" src="./在移动浏览器中使用viewport元标签控制布局 - Mobile   MDN_files/wiki.007ac3c5bb17.js" charset="utf-8"></script>
+
+
+  
+
+  
+
+  
+
+
+
+</body></html>

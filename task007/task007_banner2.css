@@ -1,0 +1,122 @@
+.banner2{width: 100%;
+  height: 566px;
+  border-top: 1px solid #938e8c;
+  position: relative;}
+
+.banner2 .bigpic{width: 850px;
+  height: 566px;
+  background: url(info1_bac.jpg);
+  background-size: cover;
+  }
+
+.banner2 .pra{width: 430px;
+  height: 566px;
+  position: absolute;
+  right: 0px;
+  top: 0px;}
+
+.banner2 .bigpic .no1{font-size: 50px;
+  font-family: SimHei;
+  color: #ffffff;
+  padding-top: 169px;
+  text-align: center;}
+
+.banner2 .bigpic .no2{font-size: 157px;
+  font-family: SimHei;
+  color: #ffffff;
+  margin-top: -30px;
+  text-align: center;}
+.banner2 .bigpic .no3{font-size: 24px;
+  font-family: SimHei;
+  color: #ffffff;
+  margin-top: 0px;
+  text-align: center;}
+.banner2 .bigpic .no4{font-size: 24px;
+  font-family: SimHei;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-left: 349px;
+  margin-top: 15px;}
+
+.banner2 .bigpic .no3 span.beijing{margin-left: 20px;}
+
+.banner2 .bigpic:after{
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-right: 30px solid #ffffff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  position: absolute;
+  right: 430px;
+  top: 50%;}
+
+.banner2 img{width: 7px;
+  height: 1px;
+  /*border-bottom: 2px solid #ffffff;*/
+  border-top: 3px solid #ffffff;
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 440px;
+  top: 386px;}
+
+/*.banner2 .bigpic .no3 span.new:after{
+  content:'';
+  width: 7px;
+  height: 0px;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;}*/
+
+.banner2 .pra p.no1{font-size: 21px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 164px;}
+
+/*.banner2 .bigpic .ceshi{position: absolute;
+  top: 386px;
+  left: 440px;
+  width: 12px;
+  border-bottom: 3px solid #000000;}*/
+
+.banner2 .pra .no1 .no{margin: 21px;
+  color: #e7504d;}
+
+.banner2 .pra .no2{width: 290px;
+  font-size: 14px;
+  color: #938e8c;
+  line-height: 32px;
+  font-family: Microsoft YaHei;
+  margin-left: 70px;
+  margin-top: 24px;}
+
+.banner2 .pra .no3{width: 103px;
+  height: 31px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  color: #e7504d;
+  line-height: 31px;
+  border: 2px solid #e7504d;
+  margin-left: 163px;
+  margin-top: 40px;}
+
+.banner2 .pra ul{margin-top: 24px;
+  margin-left: 185px;}
+.banner2 .pra ul li{width: 10px;
+  height: 10px;
+  border: 1px solid #938e8c;
+  border-radius: 5px;
+  float: left;}
+.banner2 .pra ul li+li{margin-left: 14px;}
+.banner2 .pra ul li+li+li{margin-left: 14px;}
+.banner2 .pra ul .no1{background-color: #938e8c;}
+
+.banner2 .pra img{width: 28px;
+  height: 0px;
+  border-bottom: 1px solid #938e8c;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 175px;
+  left: 210px;}

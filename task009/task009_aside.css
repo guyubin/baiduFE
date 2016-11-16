@@ -1,0 +1,156 @@
+.wrapper{background-color: #2a2e3d;
+  width: 100%;}
+.clear{clear: both;}
+
+aside{width: 260px;
+  float: left;
+  position: relative;}
+
+aside .outer{width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid #bababe;
+  border-radius: 28px;
+  margin-left: 45px;
+  margin-top: 18px;}
+aside .inner{width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+  border: 1px solid #bababe;
+  border-radius: 23px;
+  background-color: #bababe;
+  margin-top: 4px;
+  margin-left: 4px;}
+
+aside .name{font-size: 16px;
+  font-family: SimHei;
+  color: #e2e2e2;
+  position: absolute;
+  left: 120px;
+  top: 38px;}
+
+aside div p.no2{font-size: 16px;
+  font-family: SimHei;
+  color: #576477;
+  line-height: 16px;}
+aside div p.no3 span{font-size: 12px;
+  font-family: SimSun;
+  color: #576477;}
+aside div.shoucang{margin-left: 63px;
+  margin-top: 21px;
+  margin-bottom: 22px;}
+aside div .no2 .sep{margin-left: 64px;}
+aside div .no3 .sep{margin-left: 64px;}
+aside .zhixian{width: 0px;
+  height: 29px;
+  border-left: 2px solid #576477;
+  position: absolute;
+  left: 117px;
+  top: 99px;}
+
+aside .baobiao{width: 100%;
+  height: 190px;
+  background-color: #383d4e;
+  border-top: 1px solid #383d4e;}
+aside .baobiao .no1{font-family: SimHei;
+  font-size: 12px;
+  color: #ededef;
+  margin-top: 16px;
+  margin-left: 45px;
+  padding-left: 25px;
+  background: url(file_open.png) left center no-repeat;}
+
+aside .baobiao div.no2 p.no2{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 16px;
+  margin-left: 0px;
+  padding-left: 17px;
+  background: url(file_close.png) left center no-repeat;}
+aside .baobiao div.no2{padding-left: 16px;
+  background: url(close_arrow.png) left center no-repeat;
+  margin-left: 70px;}
+
+aside .baobiao div.no3 p.no3{font-family: SimHei;
+  font-size: 12px;
+  color: #ededf0;
+  margin-top: 16px;
+  margin-left: 0px;
+  padding-left: 17px;
+  background: url(file_cur.png) left center no-repeat;}
+
+
+
+
+aside .baobiao div.no3{padding-left: 16px;
+  background: url(open_arrow.png) left center no-repeat;
+  margin-left: 70px;}
+
+aside .baobiao div.no4 p.no4{font-family: SimHei;
+  font-size: 12px;
+  color: #ededf0;
+  margin-top: 16px;
+  margin-left: 101px;
+  padding-left: 14px;
+  background: url(doc_open.png) left center no-repeat;}
+
+aside .baobiao div.no5 p.no5{font-family: SimHei;
+  font-size: 12px;
+  color: #ededf0;
+  margin-top: 16px;
+  margin-left: 101px;
+  padding-left: 14px;
+  background: url(doc_close.png) left center no-repeat;}
+
+
+aside .baobiao div.no6 p.no6{font-family: SimHei;
+  font-size: 12px;
+  color: #ededf0;
+  margin-top: 16px;
+  margin-left: 0px;
+  padding-left: 17px;
+  background: url(close_arrow.png) left center no-repeat;}
+aside .baobiao div.no6{padding-left: 16px;
+  background: url(file_close.png) left center no-repeat;
+  margin-left: 70px;}
+
+
+aside .no7{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 16px;
+  margin-left: 46px;
+  padding-left: 24px;
+  background: url(star.png) left center no-repeat;}
+
+aside .no8{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 24px;
+  margin-left: 46px;
+  padding-left: 24px;
+  background: url(share.png) left center no-repeat;}
+
+aside .no9{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 24px;
+  margin-left: 46px;
+  padding-left: 24px;
+  background: url(star.png) left center no-repeat;}
+
+aside .no10{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 24px;
+  margin-left: 46px;
+  padding-left: 24px;
+  background: url(star.png) left center no-repeat;}
+
+aside .no11{font-family: SimHei;
+  font-size: 12px;
+  color: #6e8095;
+  margin-top: 24px;
+  margin-left: 46px;
+  padding-left: 24px;
+  background: url(user_info.png) left center no-repeat;}

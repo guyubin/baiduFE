@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile -->
+<html lang="zh-CN" dir="ltr" class="redesign " data-ffo-opensanslight="true" data-ffo-opensans="true"><head prefix="og: http://ogp.me/ns#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="./手机网页开发 - Web开发者指南   MDN_files/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>手机网页开发 - Web开发者指南 | MDN</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="home" href="https://developer.mozilla.org/zh-CN/">
+  <link rel="copyright" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#copyright">
+
+  
+    
+    
+    <link href="./手机网页开发 - Web开发者指南   MDN_files/mdn.65be1fdadb40.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="./手机网页开发 - Web开发者指南   MDN_files/wiki.ad38740e3609.css" rel="stylesheet" type="text/css">
+
+    
+
+
+  <!-- common social tags -->
+  
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta property="og:site_name" content="Mozilla 开发者网络">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta name="twitter:site" content="@MozDevNet">
+  <meta name="twitter:creator" content="@MozDevNet">
+
+  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/zh-CN/search/xml" title="Mozilla 开发者网络">
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile$json">
+  <link rel="canonical" href="./手机网页开发 - Web开发者指南   MDN_files/手机网页开发 - Web开发者指南   MDN.html">
+
+  
+    
+      <link rel="alternate" hreflang="en-US" href="https://developer.mozilla.org/en-US/docs/Web/Guide/Mobile" title="Mobile Web Development">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Mobile/Mobile_Web_Development" title="Mobile Web Development">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/Guide/Mobile" title="Développement web mobile">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/Guide/Movil" title="Desarrollo Web Móvil">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="手机网页开发">
+  <meta property="og:url" content="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile">
+  <meta name="twitter:url" content="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile">
+  <meta name="twitter:title" content="手机网页开发">
+  
+  <meta property="og:description" content="本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找Mozilla 火狐系统相关的项目，请参考 Firefox OS 。或者你可能会对 Firefox for Android 感兴趣。">
+  <meta name="description" content="本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找Mozilla 火狐系统相关的项目，请参考 Firefox OS 。或者你可能会对 Firefox for Android 感兴趣。">
+  <meta name="twitter:description" content="本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找Mozilla 火狐系统相关的项目，请参考 Firefox OS 。或者你可能会对 Firefox for Android 感兴趣。">
+  
+
+
+  
+    
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36116321-5', 'mozilla.org');
+    ga('set', 'anonymizeIp', true);
+
+    
+
+    // dimension9 == "Section editing"
+    
+        // dimension12 == 'Page Revision"
+        ga('set', 'dimension12', 1082474);
+
+    (function() {
+        // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+        var win = window;
+        var removeUtms = function(){
+            var location = win.location;
+            if (location.href.indexOf('utm') != -1 && win.history.replaceState) {
+                win.history.replaceState({}, '', location.pathname);
+            }
+        };
+
+        ga('send', 'pageview', {'hitCallback': removeUtms});
+    })();
+</script>
+
+  
+</head>
+<body data-slug="Web/Guide/Mobile" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'iperceptions': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = '/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/zh-CN/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.cdc2a41387bb.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+  <div class="global-notice">
+    <div class="wrap center">
+      
+        <p><bdi>Join MDN and developers like you at Mozilla's View Source conference, 12-14 September in Berlin, Germany. Learn more at <a href="https://viewsourceconf.org/">https://viewsourceconf.org</a></bdi></p>
+      
+    </div>
+  </div>
+
+
+  
+
+  <ul id="nav-access">
+    <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#document-main" id="skip-main">跳到主要内容</a></li>
+    <li><a id="skip-language" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#language">选择语言</a></li>
+    
+      <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#q" id="skip-search">跳到搜索</a></li>
+    
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="https://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+
+    <a href="https://developer.mozilla.org/zh-CN/" class="logo">Mozilla 开发者网络</a>
+
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li>
+
+    
+
+    <form>
+      <div class="oauth-login-container">
+          <div class="oauth-login-options" tabindex="0">
+              <span class="oauth-login-options-text">
+                登录
+              </span>
+              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fzh-CN%2Fdocs%2FWeb%2FGuide%2FMobile" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
+          </div>
+          <div class="oauth-login-picker" aria-hidden="true">
+              <ul>
+                  <li>
+                    登录或创建账户：<br>
+                    <a href="https://developer.mozilla.org/users/github/login/?next=%2Fzh-CN%2Fdocs%2FWeb%2FGuide%2FMobile" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a>
+                  </li>
+                  <li class="wait-for-persona">
+                      登录： <a href="https://developer.mozilla.org/docs/MDN/Contribute/Persona_Sign_In_on_MDN"><i aria-hidden="true" title="为什么只有 Persona 登录？" class="icon-question-sign"></i></a><br>
+                      <a href="https://developer.mozilla.org/zh-CN/users/signin" class="login-link launch-persona-login" data-next="/zh-CN/docs/Web/Guide/Mobile" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a>
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+    </form>
+</li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web">网络平台<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">技术</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Graphics">图像</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API">API / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Apps">应用</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">参考和指引</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn">了解 Web</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Tutorials">教程</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Reference">参考文献</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide">开发者指南</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Accessibility">无障碍环境</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Web">...更多文档</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/zh-CN/docs/Zones">Mozilla 文档<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons">附加组件</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox">Firefox</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Marketplace">火狐应用市场</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/B2G_OS">B2G OS</a></li>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/Persona">Persona</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/zh-CN/docs/Tools">开发者工具</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/MDN/Feedback">反馈<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">获取 Firefox 帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">获取 Web 开发帮助<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/docs/MDN/Community">加入 MDN 社区</a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.doc">报告内容问题<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.mdn">报告缺陷<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/zh-CN/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/zh-CN/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">搜索</label>
+          <input type="search" id="main-q" name="q" placeholder="搜索" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">搜索</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+
+    <div class="wiki-main-content" id="document-main" role="main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>语言</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/en-US/docs/Web/Guide/Mobile" title="Mobile Web Development">English (US) (en-US)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/id/docs/Mobile/Mobile_Web_Development" title="Mobile Web Development">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/Guide/Mobile" title="Développement web mobile">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/Guide/Movil" title="Desarrollo Web Móvil">Español (es)</a></bdi></li>
+                
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">编辑<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>高级</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">高级</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile$history" rel="nofollow, noindex">历史记录</a></li>
+                
+                
+                
+
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#" onclick="return window.print();">打印此文章</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="面包屑导航">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN/docs/Web" rel="v:url" property="v:title">Web 技术文档</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide" rel="v:url" property="v:title">Web开发者指南</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">手机网页开发</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="前一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">您的搜索结果</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="后一个搜索结果" data-empty-title="没有更靠前的搜索结果"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="查看所有贡献者" data-alternate-message="隐藏贡献者" data-has-hidden="1">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/mywentu" title="查看个人资料：mywentu">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/79f199875ac59787e61afe6dbde4d4bc" class="avatar loaded" height="34" width="34" alt="mywentu"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/peterwang1996" title="查看个人资料：peterwang1996">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/6f6be3db3d5af03545c1b028676fad07" class="avatar loaded" height="34" width="34" alt="peterwang1996"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/qry" title="查看个人资料：qry">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/1273e4e0e47454a99937f8a56c2f93d3" class="avatar loaded" height="34" width="34" alt="qry"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/liminjun" title="查看个人资料：liminjun">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/dce849b7ade1e954ce3db3327fe479d3" class="avatar loaded" height="34" width="34" alt="liminjun"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/xbzhs" title="查看个人资料：xbzhs">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/f511461eb5fa55fb6af9dac8b563ab5a" class="avatar loaded" height="34" width="34" alt="xbzhs"></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/duan.xiaodong" title="查看个人资料：duan.xiaodong">
+                <img src="./手机网页开发 - Web开发者指南   MDN_files/a06e2342cc0e0b562bbefc1087358c9b" class="avatar loaded" height="34" width="34" alt="duan.xiaodong"></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/wanglong" title="查看个人资料：wanglong">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wanglong" data-src="https://secure.gravatar.com/avatar/38606d515e38fda4ba7951caa5415e12?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wanglong</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/zh-CN/profiles/ziyunfei" title="查看个人资料：ziyunfei">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ziyunfei" data-src="https://secure.gravatar.com/avatar/2dbf9c055c2b32d3ca45d25be0117423?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ziyunfei</noscript></a>
+                </li>
+            
+            </ul>
+        <button id="contributors-toggle" type="button" class="transparent" data-alternate-message="隐藏贡献者">查看所有贡献者</button></div>
+        
+
+        <h1>手机网页开发</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" style="width: auto; max-height: none;">
+                <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus" aria-haspopup="true">在本文章中<i class="icon-minus"></i></a>
+                <ol class="toggle-container">
+                  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#手机设备设计" rel="internal">手机设备设计</a><ol><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#在更小的屏幕下工作" rel="internal">在更小的屏幕下工作</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#处理触摸屏" rel="internal">处理触摸屏</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#优化图片" rel="internal">优化图片</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#移动_APIs" rel="internal">移动 APIs</a></li></ol></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#跨浏览器开发" rel="internal">跨浏览器开发</a><ol><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#书写跨浏览器代码" rel="internal">书写跨浏览器代码</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#注意用户代理嗅探" rel="internal">注意用户代理嗅探</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#多浏览器中测试" rel="internal">多浏览器中测试</a></li></ol></li>
+                </ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p><span style="line-height: 1.5;">本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找Mozilla 火狐系统相关的项目，请参考</span><a href="https://developer.mozilla.org/en/Mozilla/Firefox_OS" title="Boot to Gecko" style="line-height: 1.5;">Firefox OS</a><span style="line-height: 1.5;">&nbsp;。或者你可能会对</span><a href="https://developer.mozilla.org/en/Mozilla/Firefox_for_Android" title="Firefox for Android" style="line-height: 1.5;">Firefox for Android</a><span style="line-height: 1.5;">感兴趣。</span></p>
+
+<p>我们准备用两个章节来组织本文的内容，<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#Designing_for_mobile_devices" style="line-height: 1.5;">designing for mobile devices</a><span style="line-height: 1.5;">&nbsp;和</span><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile#Cross-browser_development" style="line-height: 1.5;">cross-browser compatibility</a>。另外，这还有一篇Jason Grlick为web开发者写的指南<span style="line-height: 1.5;">&nbsp;</span><a href="https://developer.mozilla.org/en-US/docs/Web_Development/Mobile/Mobile-friendliness" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" style="line-height: 1.5;">mobile-friendliness</a>。</p>
+
+<h2 id="手机设备设计">手机设备设计</h2>
+
+<p>与台式机和笔记本相比，在硬件特性上手持设备有非常大的不同。当然通常他们的屏幕尺寸更小，另外一个特性是当用户旋转设备时，他们会在portrait和landscape模式下自动切换。旋转用户输入一般通过触屏。类似地理定位和排列方向这样在台式机上没有多大作用的API，在手机用户使用你网站的时候有了全新的体验！</p>
+
+<h3 id="在更小的屏幕下工作">在更小的屏幕下工作</h3>
+
+<p><a href="https://developer.mozilla.org/en/Web_Development/Responsive_Web_design">响应式网页设计</a>是一项让你的网站在手持设备上通过不同的使用环境进行自动适应的技术，通常来说体现在尺寸和屏幕的排列方向上。他包含下面的技术：</p>
+
+<ul>
+ <li>弹性化CSS布局设计，保证当浏览器窗口的尺寸变化时网页也能流畅地适应</li>
+ <li>根据设备屏幕的宽高，合理使用css媒体查询规则</li>
+</ul>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/" class="new">viewport meta 标签</a>指定在用户设备的浏览器中的网页的缩放比例。</p>
+
+<h3 id="处理触摸屏">处理触摸屏</h3>
+
+<p>在触摸设备中你需要使用dom的touch事件。不在需要使用css:hover伪类；同时因为手指比鼠标要大的缘故，要将可点击元素做的更大一点。参见此文&nbsp;<a href="http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/" class="external external-icon">designing for touch screens</a>.</p>
+
+<p>你可以使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled </a>media query属性在可触摸设备上加载不同的css。</p>
+
+<h3 id="优化图片">优化图片</h3>
+
+<p>为了解决那些带宽小或者流量费用昂贵的用户，你可以通过根据用户的屏幕尺寸和分辨率加载合适的图片来优化图片的加载。你可以通过媒体查询来获取屏幕的&nbsp;<a href="https://developer.mozilla.org/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>，<a href="https://developer.mozilla.org/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>&nbsp;以及&nbsp;<a href="https://developer.mozilla.org/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>。</p>
+
+<p>你也可以不使用图片，使用css属性像<a href="https://developer.mozilla.org/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a>&nbsp;和&nbsp;<a href="https://developer.mozilla.org/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a>&nbsp;来实现更好的视觉效果。</p>
+
+<h3 id="移动_APIs">移动 APIs</h3>
+
+<p>最后, 你可以利用移动设备提供的新可能性， 例如 <a href="https://developer.mozilla.org/en/Detecting_device_orientation" title="en/Detecting_device_orientation">orientation</a> 和 <a href="https://developer.mozilla.org/En/Using_geolocation" title="En/Using_geolocation">geolocation</a>。</p>
+
+<h2 id="跨浏览器开发">跨浏览器开发</h2>
+
+<h3 id="书写跨浏览器代码">书写跨浏览器代码</h3>
+
+<p>创建能够完美工作在不同移动浏览器的web sites:</p>
+
+<ul>
+ <li>请尽力避免使用特定浏览器的features, 例如CSS属性前的vendor-prefixed(浏览器厂商前缀，也称浏览器引擎前缀)。例如-moz-为Firefox|Firefox OS浏览器引擎使用到的前缀。</li>
+ <li>如果你需要使用这些features, 请检查是否其它浏览器也有实现这些特性的版本。</li>
+ <li>对于不支持这些特性的浏览器，请提供一个可接受的fallback。</li>
+</ul>
+
+<p>例如，如果使用诸如 <code>-webkit-linear-gradient</code> 之类带有渲染器前缀的属性为一些文字设置了渐变背景，你最好能够将其他带有渲染器前缀的&nbsp;<code>linear-gradient</code>&nbsp;的相应属性一并添上。如果你没有这么做，请至少确保文字和默认的背景能形成对比。这样，即便在你没有指定&nbsp;<code>linear-gradient</code>&nbsp;的浏览器里，这个页面仍然是可用的。</p>
+
+<p>请查看 <a href="https://developer.mozilla.org/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS/CSS_Reference/Mozilla_Extensions">list of Gecko-specific properties</a>&nbsp;以及&nbsp;<a href="https://developer.mozilla.org/en/CSS/CSS_Reference/Webkit_Extensions" title="en/CSS/CSS_Reference/Webkit_Extensions">WebKit-specific properties</a>&nbsp;这两个针对 Gecko 和 Webkit 浏览器的特殊前缀列表，以及这个由&nbsp;Peter Beverloo 整理的&nbsp;<a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/" class="external external-icon">table of vendor-specific properties</a>.</p>
+
+<p>使用诸如 <a href="http://csslint.net/" class="external external-icon">CSS Lint</a> 这样的工具可以帮助你查找这些问题，&nbsp;诸如&nbsp;<a href="http://sass-lang.com/" class="external external-icon">SASS</a>&nbsp;和&nbsp;<a href="http://lesscss.org/" class="external external-icon">LESS</a>&nbsp;之类的预处理器可以帮助你处理这样的跨浏览器样式。</p>
+
+<h3 id="注意用户代理嗅探">注意用户代理嗅探</h3>
+
+<p>我们推荐网站使用上面说到的方法来检测诸如屏幕尺寸和触摸屏之类的特定设备的特性，并且自动根据这些特性做出适配。但有时这样的办法并不那么管用，于是这是网站就会通过解析浏览器的 User Agent 来试图将桌面端，平板电脑端和手机端区分出来，并为不同的设备提供不同的内容。</p>
+
+<p>如果你就是这样做的，请确保你的算法是可靠的，并且确保你的服务器没有因为没有正确解析某个浏览器的 User Agent 而给它提供了不合适的页面。请点击这里&nbsp;<a href="https://developer.mozilla.org/en/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop" title="browser detection using the user agent">guide to using the user agent string to determine device type</a>&nbsp;查看关于 User Agent 解析的更多信息。</p>
+
+<h3 id="多浏览器中测试">多浏览器中测试</h3>
+
+<p>在多个浏览器中测试你的网站。这意味着在多个平台测试—至少iOS和Android。</p>
+
+<ul>
+ <li>使用 <a href="https://developer.apple.com/devcenter/ios/index.action" class="external link-https external-icon">iOS simulator</a> 在IPhone上测试移动版Safari。</li>
+ <li>使用<a href="https://developer.android.com/sdk/index.html" class="external link-https external-icon"> Android SDK </a>测试Opera和Firefox。详细方法请点击&nbsp;<a href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator" class="external link-https external-icon">running Firefox for Android using the Android emulator</a>&nbsp;查看。</li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">文档标签和贡献者</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>此页面的贡献者：</strong> 
+        <a href="https://developer.mozilla.org/zh-CN/profiles/mywentu">mywentu</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/peterwang1996">peterwang1996</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/qry">qry</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/liminjun">liminjun</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/xbzhs">xbzhs</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/duan.xiaodong">duan.xiaodong</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/wanglong">wanglong</a>, 
+    
+        <a href="https://developer.mozilla.org/zh-CN/profiles/ziyunfei">ziyunfei</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>最后编辑者:</strong>
+                      <a href="https://developer.mozilla.org/zh-CN/profiles/mywentu">mywentu</a>,
+                      <time datetime="2016-07-10T20:10:05-07:00">Jul 10, 2016, 8:10:05 PM</time>
+                    </div>
+                  
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/zh-CN/docs/Web/Guide/Mobile$edit" label="编辑页面"></menuitem>
+    <menuitem data-action="/zh-CN/docs/Web/Guide/Mobile$history" label="查看页面历史"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2016 Mozilla 开发者网络及各贡献者</p> <p>内容可按<a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">这些许可协议</a>使用。</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">关于 MDN</a></li>
+            <li><a href="https://www.mozilla.org/about/legal/terms/mozilla">条款</a></li>
+            <li><a href="https://www.mozilla.org/privacy/websites/">隐私</a></li>
+            <li><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookie</a></li>
+            <li><a href="https://github.com/mozilla/kuma">贡献代码</a></li>
+          </ul>
+        <p></p>
+        
+        </div>
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/zh-CN/docs/Web">
+      <label for="language">其他语言：</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option value="/zh-CN/docs/Web/Guide/Mobile" selected="">
+          中文 (简体)
+        </option>
+        
+          <option value="/en-US/docs/Web/Guide/Mobile">
+            English (US)
+          </option>
+          <option value="/id/docs/Mobile/Mobile_Web_Development">
+            Bahasa Indonesia
+          </option>
+          <option value="/fr/docs/Web/Guide/Mobile">
+            Français
+          </option>
+          <option value="/es/docs/Web/Guide/Movil">
+            Español
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;转到&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="https://login.persona.org/include.js">
+  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
+  <input type="hidden" name="next" value="" id="_persona_next_url">
+  <input type="hidden" name="process" value="" id="_persona_process">
+  <input type="hidden" name="assertion" id="_persona_assertion">
+</form>
+
+
+    <script type="text/javascript" src="./手机网页开发 - Web开发者指南   MDN_files/main.a7b27a25fb9c.js" charset="utf-8"></script>
+
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+
+    
+    <script type="text/javascript" src="./手机网页开发 - Web开发者指南   MDN_files/javascript.96f0e0a752fb.js"></script>
+  
+    <script async="" type="text/javascript" src="./手机网页开发 - Web开发者指南   MDN_files/wiki.007ac3c5bb17.js" charset="utf-8"></script>
+
+
+  
+
+  
+
+  
+
+
+
+</body></html>

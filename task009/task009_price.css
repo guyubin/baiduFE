@@ -1,0 +1,155 @@
+.price{margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 66px;
+  width: 891px;}
+
+.price ul{list-style: none;}
+.price ul li{box-sizing: border-box;
+  float: left;
+  background-color: #ffffff;
+  border-top: 1px solid #b0b0b0;
+  border-left: 1px solid #b0b0b0;}
+
+.price ul li.no1{width: 29px;
+  height: 66px;
+  position: relative;}
+.price ul li.no1:after{content:'';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #b0b0b0;
+  transform: rotateZ(45deg);
+  border-right-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  top: 28px;
+  left: 10px;}
+
+.price ul li.no2{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no2:hover{border-top: 2px solid #669ed2;}
+.price ul li.no2 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no2 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no2 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no2 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no3{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no3:hover{border-top: 2px solid #669ed2;}
+.price ul li.no3 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no3 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no3 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no3 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no4{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no4:hover{border-top: 2px solid #669ed2;}
+.price ul li.no4 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no4 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no4 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no4 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no5{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no5:hover{border-top: 2px solid #669ed2;}
+.price ul li.no5 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no5 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no5 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no5 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no6{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no6:hover{border-top: 2px solid #669ed2;}
+.price ul li.no6 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no6 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no6 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no6 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no7{width: 110px;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;}
+.price ul li.no7:hover{border-top: 2px solid #669ed2;}
+.price ul li.no7 p.no1{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 12px;}
+.price ul li.no7 p.no2{font-family: Microsoft YaHei;
+  font-size: 21px;
+  color: #ec6500;
+  margin-top: 4px;}
+.price ul li.no7 p.no1 span.no1{margin-left: 3px;}
+.price ul li.no7 p.no2 span.no2{font-size: 13px;
+  color: #b0b0b0;}
+
+.price ul li.no8{width: 29px;
+  height: 66px;
+  position: relative;
+  margin-left: 5px;}
+.price ul li.no8:after{content:'';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #b0b0b0;
+  transform: rotateZ(225deg);
+  border-right-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  top: 28px;
+  left: 10px;}
+
+.price ul li.no9{width: 131px;
+  height: 66px;
+  line-height: 66px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: Microsoft YaHei;}
+.price ul li.no9 p{height: 66px;
+  line-height: 66px;
+  padding-left: 43px;
+  background: url(history.png) left center no-repeat;
+  margin-left: 18px;}

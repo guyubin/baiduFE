@@ -1,0 +1,50 @@
+*{
+	margin:  0px;
+    padding: 0px;
+}
+
+.detail {
+	position: absolute;
+	top: -50px;
+	background-color: #fff;
+	z-index: 5;
+	font-size: 12px;
+	width: 120px;
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #666;
+	border-radius: 8px;
+	visibility: hidden;
+}
+
+.aqi-chart-wrap {
+	display: flex;
+	box-sizing: border-box;
+	height: 550px;
+	width: 90%;
+	border: 2px yellow;
+	padding: 0 60px;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+.chat_item {
+	animation: move_In 1s;
+	position: relative;
+	display: inline-block;
+	bottom: 0;
+	width: 100px;
+	flex-direction: row;
+	background-color: red;
+	flex-wrap: wrap;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #999;
+	margin: 1px;
+}
+@keyframes move_In {
+	0% {
+		bottom: -100%;
+	}
+	100% {
+		bottom: 0;
+	}
+}

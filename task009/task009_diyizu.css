@@ -1,0 +1,219 @@
+.diyizu{width: 893px;
+  height: 356px;
+  margin-top: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;}
+.diyizu br.clear{clear: both;}
+
+.diyizu .proj1{width: 532px;
+  height: 356px;
+  float: left;
+  border: 1px solid #d7d8d8;
+  border-radius: 4px;
+  background-color: #ffffff;}
+
+.diyizu .proj1 p.no1{font-family: SimHei;
+  font-size: 12px;
+  color: #d7d8d8;
+  height: 39px;
+  line-height: 39px;
+  text-indent: 19px;
+  background-color: #f4f5f6;
+  border-bottom: 1px solid #d7d8d8;}
+
+.diyizu .proj1 ul{margin-top: 12px;
+  margin-left: 20px;
+  list-style: none;}
+.diyizu .proj1 ul li{float: left;
+  width: 86px;
+  height: 28px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  line-height: 28px;}
+.diyizu .proj1 ul li.no1{border-top: 1px solid #cacbcb;
+  border-right: 1px solid #cacbcb;
+  border-left: 1px solid #cacbcb;
+  border-bottom: 1px solid #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;}
+
+.diyizu .proj1 ul li.no2{border-top: 1px solid #ececef;
+  border-right: 1px solid #ececef;
+  border-left: 1px solid #ececef;
+  background-color: #ececef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 3px;}
+.diyizu .proj1 ul li.no2{border-top: 1px solid #ececef;
+  border-right: 1px solid #ececef;
+  border-left: 1px solid #ececef;
+  background-color: #ececef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 3px;}
+.diyizu .proj1 ul li.no3{border-top: 1px solid #ececef;
+  border-right: 1px solid #ececef;
+  border-left: 1px solid #ececef;
+  background-color: #ececef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 3px;}
+.diyizu  .proj1 ul li.no4{border-top: 1px solid #ececef;
+  border-right: 1px solid #ececef;
+  border-left: 1px solid #ececef;
+  background-color: #ececef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 3px;}
+.diyizu  .proj1 ul li.no5{border-top: 1px solid #ececef;
+  border-right: 1px solid #ececef;
+  border-left: 1px solid #ececef;
+  background-color: #ececef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 3px;}
+
+.diyizu .proj1 .biaoge{width: 491px;
+  height: 251px;
+  margin-top: 41px;
+  margin-left: 20px;
+  border-right: 1px solid #cacbcb;
+  border-bottom: 1px solid #cacbcb;
+  border-left: 1px solid #cacbcb;
+  border-top: 1px solid #cacbcb;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;}
+
+.diyizu .proj1 .biaoge table,
+.diyizu .proj1 .biaoge td{border: 1px solid #cacbcb;}
+.diyizu .proj1 .biaoge table{border-collapse: collapse;
+  margin-top: 28px;
+  margin-left: 37px;}
+.diyizu .proj1 .biaoge td{height: 30px;
+  width: 100px;
+  font-size: 12px;
+  font-family: SimSun;
+  text-align: center;
+  line-height: 30px;}
+.diyizu .proj1 .biaoge td:hover{background-color: #cacbcb;}
+
+.diyizu .proj2{width: 351px;
+  height: 356px;
+  float: right;
+  border: 1px solid #d7d8d8;
+  border-radius: 4px;
+  background-color: #ffffff;
+  position: relative;}
+
+.diyizu .proj2 p.no1{font-family: SimHei;
+  font-size: 12px;
+  color: #d7d8d8;
+  height: 39px;
+  line-height: 39px;
+  text-indent: 19px;
+  background-color: #f4f5f6;}
+.diyizu .proj2 p.no2{font-family: Microsoft YaHei;
+  font-size: 12px;
+  color: #d7d8d8;
+  margin-top: 18px;
+  text-indent: 49px;}
+.diyizu .proj2 p.no3{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 5px;
+  text-indent: 49px;}
+
+.diyizu .proj2 div.fuzeren{width: 281px;
+  height: 45px;
+  margin-left: 35px;
+  margin-top: 8px;}
+.diyizu .proj2 div.fuzeren ul{list-style: none;}
+.diyizu .proj2 div.fuzeren ul li{float: left;}
+.diyizu .proj2 div.fuzeren ul li.no1{width: 95px;
+  height: 45px;
+  box-sizing: border-box;
+  border-top: 1px solid #d7d8d8;
+  border-right: 1px solid #d7d8d8;
+  border-bottom: 1px solid #d7d8d8;}
+.diyizu .proj2 div.fuzeren ul li.no2{width: 186px;
+  height: 45px;
+  box-sizing: border-box;
+  border-top: 1px solid #d7d8d8;
+  border-bottom: 1px solid #d7d8d8;}
+.diyizu .proj2 div.fuzeren ul li.no1 p.price1{font-size: 12px;
+  font-family: Microsoft YaHei;
+  color: #c7c6c6;
+  margin-top: 4px;
+  text-indent: 14px;}
+.diyizu .proj2 div.fuzeren ul li.no1 p.shuzi1{font-size: 12px;
+  font-family: Microsoft YaHei;
+  text-indent: 14px;
+  margin-top: 3px;}
+.diyizu .proj2 div.fuzeren ul li.no1 p.shuzi1 span{font-size: 9px;
+  margin-right: 4px;}
+.diyizu .proj2 div.fuzeren ul li.no2 p.fuzeren1{font-size: 12px;
+  font-family: Microsoft YaHei;
+  color: #c7c6c6;
+  margin-top: 4px;
+  text-indent: 14px;}
+.diyizu .proj2 div.fuzeren ul li.no2 p.name1{font-size: 12px;
+  font-family: Microsoft YaHei;
+  text-indent: 14px;
+  margin-top: 3px;}
+
+.diyizu .proj2 p.no4{font-family: Microsoft YaHei;
+  font-size: 12px;
+  color: #c7c6c6;
+  margin-top: 2px;
+  text-indent: 49px;}
+.diyizu .proj2 p.no5{font-family: Microsoft YaHei;
+  font-size: 12px;
+  margin-top: 3px;
+  text-indent: 49px;}
+
+
+.diyizu .proj2 div.xieyi{height: 67px;
+  width: 281px;
+  position: absolute;
+  bottom: 0px;
+  left: 35px;
+  box-sizing: border-box;
+  border-top: 1px solid #c7c6c6;}
+
+
+.diyizu .proj2 div.xieyi input[type="checkbox"]{margin-top: 10px;
+  margin-left: 3px;
+  -webkit-appearance:none;
+  width: 13px;
+  height: 13px;
+  background: #d5d5d5;
+  outline: none;}
+.diyizu .proj2 div.xieyi input[type="checkbox"]:checked{margin-top: 10px;
+  margin-left: 3px;
+  -webkit-appearance:none;
+  width: 13px;
+  height: 13px;
+  background: #d5d5d5 url(gou.png) center no-repeat;
+  outline: none;}
+.diyizu .proj2 div.xieyi p{font-family: Microsoft YaHei;
+  font-size: 12px;
+  color: #c7c6c6;
+  line-height: 12px;
+  position: absolute;
+  bottom: 45px;
+  left: 25px;}
+.diyizu .proj2 div.xieyi input.search{position: absolute;
+  bottom: 38px;
+  right: 0px;
+  border: none;
+  font-size: 12px;
+  font-family: SimHei;
+  color: #ffffff;
+  background-color: #388ac1;
+  width: 51px;
+  height: 26px;
+  border-radius: 2px;}
+

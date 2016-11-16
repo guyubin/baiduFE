@@ -1,0 +1,92 @@
+.volunteer{width: 100%;
+  height: 750px;}
+
+.volunteer .pra{width: 100%;
+  height: 300px;}
+
+.volunteer .pra{text-align: center;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  color: #938e8c;}
+
+.volunteer .pra .no1{font-size: 21px;
+  font-family: SimHei;
+  color: #323333;
+  padding-top: 118px;}
+
+.volunteer .pra div{width: 30px;
+  height: 0px;
+  border-bottom: 2px solid #eb6664;
+  margin-top: 10px;
+  margin-left: 626px;
+  margin-bottom: 15px;}
+
+.volunteer .wrapper{width: 1004px;
+  margin-left: 138px;
+  margin-right: 138px;}
+
+.volunteer .wrapper .xieyi{float: left;
+  width: 289px;}
+.volunteer .wrapper .biaoge{float: right;
+  width: 639px;}
+.volunteer .wrapper .clear{clear: both;}
+
+.volunteer .wrapper .xieyi p.head{font-size: 14px;
+  font-family: SimHei;
+  color: 666160;}
+.volunteer .wrapper .xieyi p.zhengwen{font-size: 12px;
+  font-family: SimSun;
+  color: #9d9b9a;
+  margin-top: 26px;
+  line-height: 22px;}
+.volunteer .wrapper .xieyi p.yingwen{font-size: 12px;
+  font-family: SimSun;
+  color: #9d9b9a;
+  text-align: right;}
+.volunteer .wrapper .xieyi div{margin-bottom: 30px;}
+
+
+.volunteer .wrapper .biaoge form .no1{width: 294px;
+  height: 41px;
+  background-color: #ededee;
+  border: none;
+  padding-left: 17px;
+  margin-bottom: 14px;}
+.volunteer .wrapper .biaoge form .no2{width: 294px;
+  height: 41px;
+  background-color: #ededee;
+  border: none;
+  padding-left: 17px;
+  margin-left: 9px;
+  margin-bottom: 14px;}
+.volunteer .wrapper .biaoge form .no3{width: 294px;
+  height: 41px;
+  background-color: #ededee;
+  border: none;
+  padding-left: 17px;
+  margin-bottom: 14px;}
+.volunteer .wrapper .biaoge form .no4{width: 294px;
+  height: 41px;
+  background-color: #ededee;
+  border: none;
+  padding-left: 17px;
+  margin-left: 9px;
+  margin-bottom: 14px;}
+
+.volunteer .wrapper .biaoge form textarea{width: 622px;
+  padding-left: 17px;
+  height: 111px;
+  padding-top: 10px;
+  background-color: #ededee;
+  border: none;
+  resize: none;
+  margin-bottom: 13px;}
+
+.volunteer .wrapper .biaoge form input.no5{width: 100%;
+  height: 41px;
+  text-align: center;
+  font-size: 14px;
+  font-family: SimHei;
+  line-height: 41px;
+  background-color: #ededee;
+  border: none;}

@@ -1,0 +1,102 @@
+.content p.alone{font-size: 12px;
+  font-family: Microsoft YaHei;
+  width: 891px;
+  margin-top: 23px;
+  margin-left: auto;
+  margin-right: auto;}
+
+.sekuai{width: 891px;
+  height: 71px;
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;}
+
+.sekuai ul{list-style: none;}
+.sekuai ul li{float: left;}
+
+.sekuai ul li.no1{width: 200px;
+  height: 71px;
+  box-sizing: border-box;
+  border-left: 3px solid #43b29e;
+  background-color: #ffffff;
+  position: relative;}
+.sekuai ul li.no1 p.shu{font-size: 12px;
+  font-family: SimHei;
+  margin-top: 15px;
+  margin-left: 10px;}
+.sekuai ul li.no1 p.char{font-size: 10px;
+  font-family: SimHei;
+  margin-top: 13px;
+  margin-left: 10px;}
+.sekuai ul li.no1 div{width: 60px;
+  height: 45px;
+  background-color: #43b29e;
+  position: absolute;
+  top: 13px;
+  right: 18px;}
+
+.sekuai ul li.no2{width: 200px;
+  height: 71px;
+  box-sizing: border-box;
+  border-left: 3px solid #388ac1;
+  background-color: #ffffff;
+  position: relative;
+  margin-left: 28px;}
+.sekuai ul li.no2 p.shu{font-size: 12px;
+  font-family: SimHei;
+  margin-top: 15px;
+  margin-left: 10px;}
+.sekuai ul li.no2 p.char{font-size: 10px;
+  font-family: SimHei;
+  margin-top: 13px;
+  margin-left: 10px;}
+.sekuai ul li.no2 div{width: 60px;
+  height: 45px;
+  background-color: #388ac1;
+  position: absolute;
+  top: 13px;
+  right: 18px;}
+
+.sekuai ul li.no3{width: 200px;
+  height: 71px;
+  box-sizing: border-box;
+  border-left: 3px solid #d04b36;
+  background-color: #ffffff;
+  position: relative;
+  margin-left: 28px;}
+.sekuai ul li.no3 p.shu{font-size: 12px;
+  font-family: SimHei;
+  margin-top: 15px;
+  margin-left: 10px;}
+.sekuai ul li.no3 p.char{font-size: 10px;
+  font-family: SimHei;
+  margin-top: 13px;
+  margin-left: 10px;}
+.sekuai ul li.no3 div{width: 60px;
+  height: 45px;
+  background-color: #d04b36;
+  position: absolute;
+  top: 13px;
+  right: 18px;}
+
+.sekuai ul li.no4{width: 200px;
+  height: 71px;
+  box-sizing: border-box;
+  border-left: 3px solid #e1cc46;
+  background-color: #ffffff;
+  position: relative;
+  margin-left: 28px;}
+.sekuai ul li.no4 p.shu{font-size: 12px;
+  font-family: SimHei;
+  margin-top: 15px;
+  margin-left: 10px;}
+.sekuai ul li.no4 p.char{font-size: 10px;
+  font-family: SimHei;
+  margin-top: 13px;
+  margin-left: 10px;}
+.sekuai ul li.no4 div{width: 60px;
+  height: 45px;
+  background-color: #e1cc46;
+  position: absolute;
+  top: 13px;
+  right: 18px;}

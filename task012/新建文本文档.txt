@@ -1,0 +1,72 @@
+
+/*#wrap{width: 300px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin: 30px;}
+#wrap #slider{width: 900px;
+  height: 100px;
+  list-style: none;
+  -webkit-animation: first 3s linear infinite;}
+
+#wrap #slider #no1{width: 300px;
+  height: 100px;
+  background-color: red;}
+#wrap #slider #no2{width: 300px;
+  height: 100px;
+  background-color: green;}
+#wrap #slider #no3{width: 300px;
+  height: 100px;
+  background-color: blue;}
+#wrap #slider li{float: left;}
+
+@-webkit-keyframes first
+{
+  0%{margin-left: 0px;}
+  16%{margin-left: -150px;}
+  33%{margin-left: -300px;}
+  50%{margin-left: -450px;}
+  66%{margin-left: -600px;}
+  99%{margin-left: -600px;}
+  100%{margin-left: 0px;}
+}
+
+@-webkit-keyframes second
+{
+  0%{margin-left: -300px;}
+  16%{margin-left: -450px;}
+  33%{margin-left: -600px;}
+  50%{margin-left: -750px;}
+  66%{margin-left: -900px;}
+  67%{margin-left: 0px;}
+  100%{margin-left: -300px;}
+}
+
+
+@-webkit-keyframes third
+{
+  0%{margin-left: -600px;}
+  16%{margin-left: -750px;}
+  33%{margin-left: 0px;}
+  50%{margin-left: -150px;}
+  66%{margin-left: -300px;}
+  100%{margin-left: -600px;}
+}
+
+#101:checked ~ #wrap #slider{-webkit-animation-name: first;}
+#102:checked ~ #wrap #slider{-webkit-animation-name: second;}
+#103:checked ~ #wrap #slider{-webkit-animation-name: third;}
+
+#101:active ~ #wrap #slider{-webkit-animation-name: none; margin-left: 0px;}
+#102:active ~ #wrap #slider{-webkit-animation-name: none; margin-left: -300px;}
+#103:active ~ #wrap #slider{-webkit-animation-name: none; margin-left: -600px;}
+
+.opts{width: 45px;
+  height: 15px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;}
+.opts label{width: 15px;
+  height: 15px;
+  float: left;
+  background-color: white;}*/

@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+height: 200px;
+width: 400px;
+background-color: #ccc;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -100px;
+margin-left: -200px;
+}
+
+.upperleft{
+height: 50px;
+width: 50px;
+background-color: #fc0;
+border-radius: 0px 0px 50px 0px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+
+.downright{
+height: 50px;
+width: 50px;
+background-color: #fc0;
+border-radius: 50px 0px 0px 0px;
+position: absolute;
+right: 0px;
+bottom: 0px;
+}

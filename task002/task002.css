@@ -1,0 +1,203 @@
+﻿/*覆盖浏览器样式*/
+*{
+  margin:0;
+  padding:0;
+}
+
+/*body的背景色*/
+body{
+  font-family:"Microsoft YaHei";
+  background-color:#D3D3D3;
+}
+
+/*header的设置*/
+header{
+position:relative;
+width:100%;
+height:60px;
+background-color:#404040;
+}
+
+header img{
+height: 50px;
+padding-left: 20px;
+padding-top: 5px;
+}
+
+header ul{
+position: absolute;
+top: 0px;
+right: 20px;
+}
+
+header ul li{
+float: left;
+width: 75px;
+height: 20px;
+display: block;
+padding: 15px 3px 25px 3px;
+}
+
+header ul li a:link{
+text-decoration: none;
+color: white;
+font-size: 12px;
+}
+header ul li a:visited{
+text-decoration: none;
+color: white;
+font-size: 12px;
+}
+
+header ul li a:hover{
+text-decoration: none;
+color: gray;
+font-size: 12px;
+}
+header ul li a:active{
+text-decoration: none;
+color: gray;
+font-size: 12px;
+}
+
+header ul li a strong{
+font-size: 20px;
+color: black;
+}
+
+/*article的设置*/
+article, aside{
+padding: 20px;
+margin: 30px 30px 0px 3px;
+background-color: white;
+box-shadow:0px 10px 5px 0px;
+}
+
+article h2{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+article h3{
+padding-top: 5px;
+padding-bottom: 5px;
+font-size: 16px;
+color: gray;
+}
+
+article p span{
+font-size: 12px;
+color: gray;
+}
+
+article p.content{
+text-indent: 2em;
+}
+
+article.no2 ul{
+list-style-type: none;
+padding: 15px 0px 0px 20px;
+}
+
+article.no3 ul{
+list-style-type: none;
+padding: 20px 0px 0px 20px;
+}
+
+article.no3 ul li{
+width: 150px;
+height: 150px;
+margin: 15px;
+border-style: solid;
+border-color: gray;
+border-width: 1px;
+}
+
+article.no3 ul li span{
+display: block;
+text-align: center;
+}
+
+article.no3 ul li img{
+width:100px;
+height:100px;
+padding: 0px 25px 15px 25px;
+}
+
+
+article ol{
+padding: 20px 0px 20px 60px;
+}
+
+article ol li{
+color: black;
+font-weight: bold;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+border: 1px solid gray;
+}
+
+table #first{
+color: white;
+background-color: black;
+}
+
+table #last{
+background-color: gray;
+}
+
+aside h2{
+padding-left: 40px;
+border-left: 5px solid gray;
+margin-bottom: 10px;
+}
+
+aside form div{
+font-size: 16px;
+margin: 15px 0;
+}
+
+aside form div .tips{
+display:block;
+float: left;
+text-align: right;
+width: 35%;
+padding-right: 15px;
+}
+
+aside form div p{
+padding-left: 15px;
+padding-top: 10px;
+margin-left: 35%;
+}
+
+aside form div textarea{
+width: 600px;
+height: 200px;
+}
+
+aside form div input.submitted{
+width: 100%;
+height: 50px;
+color: white;
+background: blue;
+margin-top: 15px; 
+border-radius: 10px; 
+}
+
+footer{
+position:relative;
+width:100%;
+height:60px;
+background-color:#404040;
+margin: 30px 0px;
+}
+
+footer p{
+text-align: center;
+padding-top: 15px;
+color: white;
+}

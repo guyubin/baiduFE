@@ -1,0 +1,88 @@
+.selectbiao{width: 889px;
+  height: 84px;
+  border: 1px solid #b7b7b7;
+  margin-top: 19px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  position: relative;}
+
+.selectbiao .no1,
+.selectbiao .no2,
+.selectbiao .no3{float: left;}
+
+.selectbiao .no1 span{color: #b0b0b0;
+  font-family: SimHei;
+  font-size: 12px;
+  margin-right: 15px;}
+.selectbiao .no1 select{color: #000000;
+  font-family: SimHei;
+  font-size: 12px;
+  width: 68px;
+  height: 23px;
+  border: 1px solid #c2c3c3;
+  text-indent: 5px;
+  background: url(blue_arrow.png) no-repeat 90% 9px;
+  -webkit-appearance: none;}
+.selectbiao .no1{margin-left: 15px;
+  margin-top: 15px;}
+
+.selectbiao .no2{width: 160px;}
+.selectbiao .no2 span{color: #b0b0b0;
+  font-family: SimHei;
+  font-size: 12px;
+  margin-right: 15px;}
+.selectbiao .no2 select{color: #000000;
+  font-family: SimHei;
+  font-size: 12px;
+  width: 119px;
+  height: 23px;
+  border: 1px solid #c2c3c3;
+  text-indent: 5px;
+  margin-bottom: 5px;
+  background: url(black_arrow.png) no-repeat 90% 9px;
+  -webkit-appearance: none;}
+.selectbiao .no2{margin-left: 42px;
+  margin-top: 15px;}
+
+.selectbiao .no3{width: 292px;}
+.selectbiao .no3 span{color: #b0b0b0;
+  font-family: SimHei;
+  font-size: 12px;
+  margin-right: 15px;}
+.selectbiao .no3 select{color: #000000;
+  font-family: SimHei;
+  font-size: 12px;
+  height: 23px;
+  border: 1px solid #c2c3c3;
+  text-indent: 5px;
+  margin-bottom: 5px;
+  background: url(black_arrow.png) no-repeat 90% 9px;
+  -webkit-appearance: none;}
+.selectbiao .no3{margin-left: 60px;
+  margin-top: 15px;}
+.selectbiao .no3 select.sno1{width: 117px;}
+.selectbiao .no3 select.sno2{width: 68px;}
+.selectbiao .no3 select.sno3{width: 67px;}
+.selectbiao .no3 select.sno4{width: 118px;}
+
+.selectbiao input{border: none;
+  width: 51px;
+  height: 26px;
+  border-radius: 1px;
+  background-color: #388bc2;
+  font-size: 12px;
+  font-family: SimHei;
+  color: #ffffff;
+  margin-top: 31px;
+  margin-left: 29px;}
+
+.selectbiao img{position: absolute;
+  top: 23px;
+  left: 335px;}
+.selectbiao .char{font-size: 12px;
+  font-family: SimHei;
+  color: #ffffff;
+  position: absolute;
+  top: 35px;
+  left: 347px;}

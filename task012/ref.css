@@ -1,0 +1,63 @@
+*{margin: 0px;
+  padding: 0px;}
+#wrap{width: 300px;
+  overflow: hidden;}
+
+ul{width: 900px;
+  height: 100px;
+  list-style: none;
+  -webkit-animation: first 12s ease-in-out infinite;
+  position: relative;}
+
+ul #no1{width: 300px;
+  height: 100px;
+  background-color: red;}
+ul #no2{width: 300px;
+  height: 100px;
+  background-color: yellow;}
+ul #no3{width: 300px;
+  height: 100px;
+  background-color: green;}
+
+ul li{float: left;}
+
+#banner1:target ~ ul{-webkit-animation-name: first;}
+#banner2:target ~ ul{-webkit-animation-name: second;}
+#banner3:target ~ ul{-webkit-animation-name: third;}
+
+
+@-webkit-keyframes first
+{
+  0%{margin-left: 0px;}
+  16%{margin-left: 0px;}
+  
+  33%{margin-left: -300px;}
+  50%{margin-left: -450px;}
+  66%{margin-left: -600px;}
+  99%{margin-left: -600px;}
+  100%{margin-left: 0px;}
+}
+
+@-webkit-keyframes second
+{
+  0%{margin-left: -300px;}
+  16%{margin-left: -300px;}
+  33%{margin-left: -600px;}
+  66%{margin-left: -600px;}
+  67%{margin-left: 0px;}
+  100%{margin-left: -300px;}
+}
+
+
+@-webkit-keyframes third
+{
+  0%{margin-left: -600px;}
+  32%{margin-left: -600px;}
+  33%{margin-left: 0px;}
+  50%{margin-left: -150px;}
+  66%{margin-left: -300px;}
+  100%{margin-left: -600px;}
+}
+
+
+

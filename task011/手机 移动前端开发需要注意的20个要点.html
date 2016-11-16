@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://sentsin.com/web/54.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./手机 移动前端开发需要注意的20个要点_files/laycode.css" type="text/css" rel="stylesheet">
+<meta charset="gbk">
+<title>手机/移动前端开发需要注意的20个要点</title>
+<meta name="description" content="移动前端开发正逐渐步入前端技术的主流，事实上跟在一般的pc上，并不需要你掌握额外的技术，然而你在pc web上那一套在多数情况下并不适用于手机web，你必须知道这其中的注意点。当然移动web给人的感觉是一个拼h5和css3的阵地，这里面有足够高大上的技术等着你去驾驭，在这方面，你可以欣喜地说：让ie见鬼去吧">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="http://res.sentsin.com/css/xu.css" media="all">
+<script src="./手机 移动前端开发需要注意的20个要点_files/ca-pub-6111334333458862.js"></script><script type="text/javascript" async="" charset="utf-8" src="./手机 移动前端开发需要注意的20个要点_files/core.php"></script><script type="text/javascript" async="" src="./手机 移动前端开发需要注意的20个要点_files/embed.js" charset="UTF-8"></script><script src="./手机 移动前端开发需要注意的20个要点_files/logger.js"></script><link href="./手机 移动前端开发需要注意的20个要点_files/bdsstyle.css" rel="stylesheet" type="text/css"><link type="text/css" rel="stylesheet" href="./手机 移动前端开发需要注意的20个要点_files/embed.default.css"><link type="text/css" rel="stylesheet" href="./手机 移动前端开发需要注意的20个要点_files/layer.css" id="skinlayercss"></head>
+<body class="blogweb laycode body_ok"><iframe frameborder="0" style="display: none;"></iframe><div id="bdshare_s" style="display: block;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://sentsin.com/web/54.html#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_renren rrw">人人网</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_douban db">豆瓣网</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_thx thx">和讯微博</a></li><li><a href="http://sentsin.com/web/54.html#" class="bds_more">更多...</a></li></ul><p><a href="http://sentsin.com/web/54.html#" class="goWebsite">百度分享</a></p></div></div></div>
+<div class="xutop"><i class="iconfont iconf_caidan"></i></div>
+<div class="box_index xunav">
+    <a href="http://sentsin.com/">首页</a><a href="http://sentsin.com/daohang/">前端江湖录</a><a href="http://fly.layui.com/">Fly社区</a>
+<i class="navpos"></i></div>
+<div class="box_index xuheader">
+    <div class="shadow xuheader_Bg"></div>
+    <a href="http://sentsin.com/" title="贤心博客" class="xulogo" target="_self"><img src="./手机 移动前端开发需要注意的20个要点_files/logo.png" alt="贤心博客"></a>
+    <div class="xucard">
+        <p>你瞧那远古的光 裸露空荡</p>
+        <p>无穷无尽是你深邃的眼 传递遐想 </p>
+        <p style="margin-top: 8px;">――《远与暗》 写于2012・春・杭州</p>
+    </div>
+    <div class="icon_layer xuheader_yuan"></div>
+<form action="http://www.baidu.com/s"><input class="icon_old" autocomplete="off" placeholder="搜索内容" type="text" name="wd"></form></div>
+<div class="box_index timeline clearfix timeline_ok">
+    <ul class="timeline_left timeline_leftweb">
+		<li class="shadow timeline_content">
+            <div class="timeline_text">
+            	<div class="timeline_textH2">
+                    <h1><i class="icon_timeline"></i><a href="./手机 移动前端开发需要注意的20个要点_files/手机 移动前端开发需要注意的20个要点.html">手机/移动前端开发需要注意的20个要点</a></h1>
+                    <div class="timeline_webtips"><span>作者：<em class="ws_auther">网络</em></span><span class="timeline_time"><i class="icon_timeline" title="发布日期"></i>最后编辑：2014年12月26日</span></div>
+                </div>
+                <div class="timeline_desc">
+                    <div id="DetailAd"></div>
+                    
+                    <!-- 通用-728*90 -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="9841027833" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+
+                    <div id="MyContent"><p class="sethui">
+	贤心按：移动前端开发正逐渐步入前端技术的主流，事实上跟在一般的pc上，并不需要你掌握额外的技术，然而你在pc web上那一套在多数情况下并不适用于手机web，你必须知道这其中的注意点。当然移动web给人的感觉是一个拼h5和css3的阵地，这里面有足够高大上的技术等着你去驾驭，在这方面，你可以欣喜地说：让ie见鬼去吧。</p>
+<p>
+	<strong>1、首先我们来看看webkit内核中的一些私有的meta标签，这些meta标签在开发webapp时起到非常重要的作用</strong></p>
+<div class="code_box code_skin0"><pre>&lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"&gt;
+&lt;meta content="yes" name="apple-mobile-web-app-capable"&gt;
+&lt;meta content="black" name="apple-mobile-web-app-status-bar-style"&gt;
+&lt;meta content="telephone=no" name="format-detection"&gt;
+<ol class="code_nums" style="height:105px;"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ol></pre><span class="code_title">代码<a href="http://sentsin.com/layui/laycode/" target="_blank">laycode - v1.1</a></span></div>
+<p>
+	第一个meta标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；</p>
+<p>
+	第二个meta标签是iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览；</p>
+<p>
+	第三个meta标签也是iphone的私有标签，它指定的iphone中safari顶端的状态条的样式；</p>
+<p>
+	第四个meta标签表示：告诉设备忽略将页面中的数字识别为电话号码</p>
+<p>
+	&nbsp;</p>
+<p>
+	2、HTML5标签的使用</p>
+<p>
+	在开始编写webapp时，哥建议前端工程师使用HTML5，而放弃HTML4，因为HTML5可以实现一些HTML4中无法实现的丰富的WEB应用程序的体验，可以减少开发者很多的工作量，当然了你决定使用HTML5前，一定要对此非常熟悉，要知道HTML5的新标签的作用。比如定义一块内容或文章区域可使用section标签，定义导航条或选项卡可以直接使用nav标签等等。</p>
+<p>
+	&nbsp;</p>
+<p>
+	3、放弃CSS&nbsp;float属性</p>
+<p>
+	在项目开发过程中可以会遇到内容排列显示的布局，假如你遇见这样的视觉稿，哥建议你放弃float，可以直接使用display:inline-block;</p>
+<p>
+	&nbsp;</p>
+<p>
+	4、利用CSS3边框背景属性</p>
+<p>
+	这个按钮有圆角效果，有内发光效果还有高光效果，这样的按钮使用CSS3写是无法写出来的，当然圆角可以使用CSS3来写，但高光和内发光却无法使用CSS3编写，</p>
+<p>
+	这个时候你不妨使用-webkit-border-image来定义这个按钮的样式。</p>
+<p>
+	-webkit-border-image就个很复杂的样式属性。</p>
+<p>
+	&nbsp;</p>
+<p>
+	5、块级化a标签</p>
+<p>
+	请保证将每条数据都放在一个a标签中，为何这样做？因为在触控手机上，为提升用户体验，尽可能的保证用户的可点击区域较大。</p>
+<p>
+	&nbsp;</p>
+<p>
+	6、自适应布局模式</p>
+<p>
+	在编写CSS时，我不建议前端工程师把容器（不管是外层容器还是内层）的宽度定死。为达到适配各种手持设备，我建议前端工程师使用自适应布局模式（支付宝采用了自适应布局模式），因为这样做可以让你的页面在ipad、itouch、ipod、iphone、android、web&nbsp;safarik、chrome都能够正常的显示，你无需再次考虑设备的分辨率。</p>
+<p>
+	&nbsp;</p>
+<p>
+	7、学会使用webkit-box</p>
+<p>
+	上一节，我们说过自适应布局模式，有些同学可能会问：如何在移动设备上做到完全自适应呢？很感谢webkit为display属性提供了一个webkit-box的值，它可以帮助前端工程师做到盒子模型灵活控制。</p>
+<p>
+	&nbsp;</p>
+<p>
+	8、如何去除Android平台中对邮箱地址的识别</p>
+<p>
+	看过iOS&nbsp;webapp&nbsp;API的同学都知道iOS提供了一个meta标签:用于禁用iOS对页面中电话号码的自动识别。在iOS中是不自动识别邮件地址的，但在Android平台，它会自动检测邮件地址，当用户touch到这个邮件地址时，Android会弹出一个框提示用户发送邮件，如果你不想Android自动识别页面中的邮件地址，你不妨加上这样一句meta标签在head中</p>
+<p>
+	&lt;meta&nbsp;content="email=no"&nbsp;name="format-detection"&nbsp;/&gt;</p>
+<p>
+	&nbsp;</p>
+<p>
+	9、如何去除iOS和Android中的输入URL的控件条</p>
+<p>
+	你的老板或者PD或者交互设计师可能会要求你：能否让我们的webapp更加像nativeapp，我不想让用户看见那个输入url的控件条？</p>
+<p>
+	答案是可以做到的。我们可以利用一句简单的javascript代码来实现这个效果</p>
+<p>
+	setTimeout(scrollTo,0,0,0);</p>
+<p>
+	请注意，这句代码必须放在window.onload里才能够正常的工作，而且你的当前文档的内容高度必须是高于窗口的高度时，这句代码才能有效的执行。</p>
+<p>
+	&nbsp;</p>
+<p>
+	10、如何禁止用户旋转设备</p>
+<p>
+	我曾经也想禁止用户旋转设备，也想实现像某些客户端那样：只能在肖像模式或景观模式下才能正常运行。但现在我可以很负责任的告诉你：别想了!在移动版的webkit中做不到！</p>
+<p>
+	至少Apple&nbsp;webapp&nbsp;API已经说到了：我们为了让用户在safari中正常的浏览网页，我们必须保证用户的设备处于任何一个方位时，safari都能够正常的显示网页内容（也就是自适应），所以我们禁止开发者阻止浏览器的orientationchange事件，看来苹果公司的出发点是正确的，苹果确实不是一般的苹果。</p>
+<p>
+	iOS已经禁止开发者阻止orientationchange事件，那Android呢？对不起，我没有找到任何资料说Android禁止开发者阻止浏览器orientationchange事件，但是在Android平台，确实也是阻止不了的。</p>
+<p>
+	&nbsp;</p>
+<p>
+	11、如何检测用户是通过主屏启动你的webapp</p>
+<p>
+	看过Apple&nbsp;webapp&nbsp;API的同学都知道iOS为safari提供了一个将当前页面添加主屏的功能，按下iphoneipodipod&nbsp;touch底部工具中的小加号，或者ipad顶部左侧的小加号，就可以将当前的页面添加到设备的主屏，在设备的主屏会自动增加一个当前页面的启动图标，点击该启动图标就可以快速、便捷的启动你的webapp。从主屏启动的webapp和浏览器访问你的webapp最大的区别是它清除了浏览器上方和下方的工具条，这样你的webapp就更加像是nativeapp了，还有一个区别是window对像中的navigator子对象的一个standalone属性。iOS中浏览器直接访问站点时，navigator.standalone为false,从主屏启动webapp时，navigator.standalone为true，&nbsp;我们可以通过navigator.standalone这个属性获知用户当前是否是从主屏访问我们的webapp的。</p>
+<p>
+	在Android中从来没有添加到主屏这回事！</p>
+<p>
+	&nbsp;</p>
+<p>
+	12、如何关闭iOS中键盘自动大写</p>
+<p>
+	我们知道在iOS中，当虚拟键盘弹出时，默认情况下键盘是开启首字母大写的功能的，根据某些业务场景，可能我们需要关闭这个功能，移动版本webkit为input元素提供了autocapitalize属性，通过指定autocapitalize=”off”来关闭键盘默认首字母大写。</p>
+<p>
+	&nbsp;</p>
+<p>
+	13、iOS中如何彻底禁止用户在新窗口打开页面</p>
+<p>
+	有时我们可能需要禁止用户在新窗口打开页面，我们可以使用a标签的target=”_self“来指定用户在新窗口打开，或者target属性保持空，但是你会发现iOS的用户在这个链接的上方长按3秒钟后，iOS会弹出一个列表按钮，用户通过这些按钮仍然可以在新窗口打开页面，这样的话，开发者指定的target属性就失效了，但是可以通过指定当前元素的-webkit-touch-callout样式属性为none来禁止iOS弹出这些按钮。这个技巧仅适用iOS对于Android平台则无效。</p>
+<p>
+	&nbsp;</p>
+<p>
+	14、iOS中如何禁止用户保存图片＼复制图片</p>
+<p>
+	我们在第13条技巧中提到元素的-webkit-touch-callout属性，同样为一个img标签指定-webkit-touch-callout为none也会禁止设备弹出列表按钮，这样用户就无法保存＼复制你的图片了。</p>
+<p>
+	&nbsp;</p>
+<p>
+	15、iOS中如何禁止用户选中文字</p>
+<p>
+	我们通过指定文字标签的-webkit-user-select属性为none便可以禁止iOS用户选中文字。</p>
+<p>
+	&nbsp;</p>
+<p>
+	16、iOS中如何获取滚动条的值</p>
+<p>
+	桌面浏览器中想要获取滚动条的值是通过document.scrollTop和document.scrollLeft得到的，但在iOS中你会发现这两个属性是未定义的，为什么呢？因为在iOS中没有滚动条的概念，在Android中通过这两个属性可以正常获取到滚动条的值，那么在iOS中我们该如何获取滚动条的值呢？</p>
+<p>
+	通过window.scrollY和window.scrollX我们可以得到当前窗口的y轴和x轴滚动条的值。</p>
+<p>
+	&nbsp;</p>
+<p>
+	17、如何解决盒子边框溢出</p>
+<p>
+	当你指定了一个块级元素时，并且为其定义了边框，设置了其宽度为100％。在移动设备开发过程中我们通常会对文本框定义为宽度100％，将其定义为块级元素以实现全屏自适应的样式，但此时你会发现，该元素的边框(左右)各1个像素会溢了文档，导致出现横向滚动条，为解决这一问题，我们可以为其添加一个特殊的样式-webkit-box-sizing:border-box;用来指定该盒子的大小包括边框的宽度。</p>
+<p>
+	&nbsp;</p>
+<p>
+	18、如何解决Android&nbsp;2.0以下平台中圆角的问题</p>
+<p>
+	如果大家够细心的话，在做wap站点开发时，大家应该会发现android&nbsp;2.0以下的平台中问题特别的多，比如说边框圆角这个问题吧。</p>
+<p>
+	在对一个元素定义圆角时，为完全兼容android&nbsp;2.0以下的平台，我们必须要按照以下技巧来定义边框圆角：</p>
+<p>
+	1＼-webkit这个前缀必须要加上（在iOS中，你可以不加，但android中一定要加）；</p>
+<p>
+	2＼如果对针对边框做样式定义，比如border:1px&nbsp;solid&nbsp;#000;那么-webkit-border-radius这属性必须要出现在border属性后。</p>
+<p>
+	3＼假如我们有这样的视觉元素，左上角和右上角是圆角时，我们必须要先定义全局的(4个角的圆角值)-webkit-border-radius:5px;然后再依次的覆盖左下角和右下角，-webkit-border-bottom-left-radius:0;-webkit-border-bottom-right-border:0;否则在android&nbsp;2.0以下的平台中将全部显示直角，还有记住！-webkit这个前缀一定要加上！</p>
+<p>
+	&nbsp;</p>
+<p>
+	19、如何解决android平台中页面无法自适应</p>
+<p>
+	虽然你的html和css都是完全自适应的，但有一天如果你发现你的页面在android中显示的并不是自适应的时候，首先请你确认你的head标签中是否包含以下meta标签：</p>
+<p>
+	&lt;meta&nbsp;name="viewport"&nbsp;content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;"&nbsp;/&gt;</p>
+<p>
+	如果有的话，那请你再仔细的看清楚有没有这个属性的值width=device-width，如果没有请立即加上吧！</p>
+<p>
+	&nbsp;</p>
+<p>
+	20、如何解决iOS&nbsp;4.3版本中safari对页面中5位数字的自动识别和自动添加样式</p>
+<p>
+	新的iOS系统也就是4.3版本，升级后对safari造成了一个bug：即使你添加了如下的meta标签，safari仍然会对页面中的5位连续的数字进行自动识别，并且将其重新渲染样式，也就是说你的css对该标签是无效的。</p>
+<p>
+	&lt;meta&nbsp;name="format-detection"&nbsp;content="telphone=no"&nbsp;/&gt;</p>
+<p>
+	我们可以用一个比较龌龊的办法来解决。比如说支付宝wap站点中显示金额的标签，我们都做了如下改写：</p>
+<p>
+	&lt;button&nbsp;class="t-balance"style="background:none;padding:0;border:0;"&gt;95009.00&lt;/button&gt;元</p></div>
+
+                    
+                    <div style="padding:20px 0;text-align:center;">
+                        <!-- 336*280 -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="8847462638" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+                    </div>
+                    
+                    <div class="timeshow_share">
+                        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                            <a class="bds_tsina" title="分享到新浪微博" href="http://sentsin.com/web/54.html#;"></a>
+                            <a class="bds_qzone" title="分享到QQ空间" href="http://sentsin.com/web/54.html#;"></a>
+                            <a class="bds_tqq" title="分享到腾讯微博" href="http://sentsin.com/web/54.html#"></a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="line"></div>
+                    <ul class="web_shownext">
+                        <li>上一篇：<a href="http://sentsin.com/web/53.html" title="编写高质量的javascript之减少全局变量污染">编写高质量的javascript之减少全局变量污染</a></li>
+                        <li>下一篇：<a href="http://sentsin.com/web/55.html" title="编写高质量的js之注意数据类型的特殊性">编写高质量的js之注意数据类型的特殊性</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="arrow_bg"></span>
+            <span class="icon_timeline arrow_dot"></span>
+        </li>
+    </ul>
+    <ul class="timeline_right timeline_weiboright">
+        <div id="DetailAdRight"><img src="./手机 移动前端开发需要注意的20个要点_files/detail-350.jpg"></div>
+        <li class="shadow timeline_content xu">
+             <h3 class="main_title"><i class="i"></i>博文评论<i class="switch" title="收缩"></i></h3>
+            <div class="timeline_text xu">
+                <div class="timeline_desc" id="thirdComment">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread ds-narrow" data-thread-key="113-54" data-title="手机/移动前端开发需要注意的20个要点" data-url="http://sentsin.com/web/54.html" id="ds-thread"><div id="ds-reset"><div class="ds-comments-info"><div class="ds-sort"><a class="ds-order-desc ds-current">最新</a><a class="ds-order-asc">最早</a><a class="ds-order-hot">最热</a></div><ul class="ds-comments-tabs"><li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);"><span class="ds-service-icon ds-duoshuo"></span>7</a></li>  </ul></div><ul class="ds-comments"><li class="ds-post" data-post-id="6303288355173958401"><div class="ds-post-self" data-post-id="6303288355173958401" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="6303288326556222210"><a rel="nofollow author" target="_blank" href="http://weibo.com/1791119427" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=6303288326556222210&#39;;" title="馨迤寒霜"><img src="./手机 移动前端开发需要注意的20个要点_files/6ac25043jw1e8qgp5bmzyj2050050aa8.jpg" alt="馨迤寒霜"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/1791119427" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=6303288326556222210&#39;;" rel="nofollow" target="_blank" data-user-id="6303288326556222210">馨迤寒霜</a></div><p>display:inline-block;有上下不能对齐的效果要怎么处理呢</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2016-07-04T10:18:04+08:00" title="2016年7月4日 上午10:18:04">7月4日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="6238357988650779393"><div class="ds-post-self" data-post-id="6238357988650779393" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="6238357937660625665"><a rel="nofollow author" target="_blank" href="http://t.qq.com/yutop1" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=6238357937660625665&#39;;" title="文谦"><img src="./手机 移动前端开发需要注意的20个要点_files/121820.jpg" alt="文谦"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/yutop1" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=6238357937660625665&#39;;" rel="nofollow" target="_blank" data-user-id="6238357937660625665">文谦</a></div><p>学习了，感谢博主分享</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2016-01-11T10:55:05+08:00" title="2016年1月11日 上午10:55:05">1月11日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(1)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1415877406970872440"><div class="ds-post-self" data-post-id="1415877406970872440" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="13253678"><a rel="nofollow author" target="_blank" href="http://t.qq.com/yangxiaoli3770" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=13253678&#39;;" title="杨晓丽"><img src="./手机 移动前端开发需要注意的20个要点_files/50" alt="杨晓丽"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/yangxiaoli3770" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=13253678&#39;;" rel="nofollow" target="_blank" data-user-id="13253678">杨晓丽</a></div><p> <img src="./手机 移动前端开发需要注意的20个要点_files/cj_org.gif" alt="[吃惊]" title="[吃惊]" class="ds-smiley"> </p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-08-21T15:12:56+08:00" title="2015年8月21日 下午3:12:56">2015年8月21日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1415877406970872439"><div class="ds-post-self" data-post-id="1415877406970872439" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="13253678"><a rel="nofollow author" target="_blank" href="http://t.qq.com/yangxiaoli3770" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=13253678&#39;;" title="杨晓丽"><img src="./手机 移动前端开发需要注意的20个要点_files/50" alt="杨晓丽"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/yangxiaoli3770" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=13253678&#39;;" rel="nofollow" target="_blank" data-user-id="13253678">杨晓丽</a></div><p> <img src="./手机 移动前端开发需要注意的20个要点_files/rabbit_org.gif" alt="[兔子]" title="[兔子]" class="ds-smiley"> </p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-08-21T15:12:07+08:00" title="2015年8月21日 下午3:12:07">2015年8月21日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1415877406970872405"><div class="ds-post-self" data-post-id="1415877406970872405" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="1464644"><a rel="nofollow author" target="_blank" href="http://t.qq.com/weibowj120" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=1464644&#39;;" title="如泡如影"><img src="./手机 移动前端开发需要注意的20个要点_files/50(1)" alt="如泡如影"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/weibowj120" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=1464644&#39;;" rel="nofollow" target="_blank" data-user-id="1464644">如泡如影</a></div><p>第16点，我使用pc浏览器chrome模拟手机端测试的时候，还是获取不到scrollTop，必须在真机上才能获取到吗？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-08-05T15:10:18+08:00" title="2015年8月5日 下午3:10:18">2015年8月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1415877406970872399"><div class="ds-post-self" data-post-id="1415877406970872399" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="12927329"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dhfg1992" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=12927329&#39;;" title="无意"><img src="./手机 移动前端开发需要注意的20个要点_files/50(2)" alt="无意"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dhfg1992" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=12927329&#39;;" rel="nofollow" target="_blank" data-user-id="12927329">无意</a></div><p> <img src="./手机 移动前端开发需要注意的20个要点_files/zy_org.gif" alt="[挤眼]" title="[挤眼]" class="ds-smiley"> </p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-07-25T18:21:04+08:00" title="2015年7月25日 下午6:21:04">2015年7月25日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1415877406970871975"><div class="ds-post-self" data-post-id="1415877406970871975" data-thread-id="1415877406970871894" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="457650"><a rel="nofollow author" target="_blank" href="http://t.qq.com/gao624723483bo" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=457650&#39;;" title="阿波"><img src="./手机 移动前端开发需要注意的20个要点_files/50(3)" alt="阿波"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/gao624723483bo" onclick="this.href=&#39;http://sentsin.duoshuo.com/user-url/?user_id=457650&#39;;" rel="nofollow" target="_blank" data-user-id="457650">阿波</a></div><p>给力</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-02-03T11:49:11+08:00" title="2015年2月3日 上午11:49:11">2015年2月3日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li></ul><div class="ds-paginator" style="display: none;"><div class="ds-border"></div><a data-page="1" href="javascript:void(0);" class="ds-current">1</a></div><a name="respond"></a><div class="ds-login-buttons"><p>社交帐号登录:</p><div class="ds-social-links"><ul class="ds-service-list"><li><a href="http://sentsin.duoshuo.com/login/weixin/" rel="nofollow" class="ds-service-link ds-weixin">微信</a></li><li><a href="http://sentsin.duoshuo.com/login/weibo/" rel="nofollow" class="ds-service-link ds-weibo">微博</a></li><li><a href="http://sentsin.duoshuo.com/login/qq/" rel="nofollow" class="ds-service-link ds-qq">QQ</a></li><li><a href="http://sentsin.duoshuo.com/login/renren/" rel="nofollow" class="ds-service-link ds-renren">人人</a></li><li><a class="ds-more-services" href="javascript:void(0)">更多»</a></li></ul><ul class="ds-service-list ds-additional-services"><li><a href="http://sentsin.duoshuo.com/login/douban/" rel="nofollow" class="ds-service-link ds-douban">豆瓣</a></li><li><a href="http://sentsin.duoshuo.com/login/kaixin/" rel="nofollow" class="ds-service-link ds-kaixin">开心</a></li><li><a href="http://sentsin.duoshuo.com/login/baidu/" rel="nofollow" class="ds-service-link ds-baidu">百度</a></li><li><a href="http://sentsin.duoshuo.com/login/google/" rel="nofollow" class="ds-service-link ds-google">谷歌</a></li></ul></div></div><div class="ds-replybox"><a class="ds-avatar" href="javascript:void(0);" onclick="return false"><img src="./手机 移动前端开发需要注意的20个要点_files/121820.jpg" alt=""></a><form method="post"><input type="hidden" name="thread_id" value="1415877406970871894">
+<input type="hidden" name="parent_id" value="">
+<input type="hidden" name="nonce" value="57171ab5252d6"><div class="ds-textarea-wrapper ds-rounded-top"><textarea name="message" title="Ctrl+Enter快捷提交" placeholder=" "></textarea><div class="code_box code_skin0"><pre class="ds-hidden-text"><ol class="code_nums" style="height:-10px;"></ol></pre><span class="code_title">代码<a href="http://sentsin.com/layui/laycode/" target="_blank">laycode - v1.1</a></span></div></div><div class="ds-post-toolbar"><div class="ds-post-options ds-gradient-bg"><span class="ds-sync"></span></div><button class="ds-post-button" type="submit">发布</button><div class="ds-toolbar-buttons"><a class="ds-toolbar-button ds-add-emote" title="插入表情"></a></div></div></form></div><p class="ds-powered-by"><a href="http://duoshuo.com/" target="_blank" rel="nofollow">多说</a></p></div></div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                    var duoshuoQuery = {short_name:"sentsin"};
+                    (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] 
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                    </script>
+                </div>
+            </div>
+            <span class="arrow_bg"></span>
+            <span class="icon_timeline arrow_dot"></span>
+        </li>
+    </ul>
+    <div class="c"></div>
+    <span class="arrow_line"><i id="add_event_plus" class="icon_timeline spine_plus"></i></span>
+</div>
+<div class="box_index shadow xufooter">
+    <div class="bottomMsg">
+        <a href="http://sentsin.com/" class="footer_logo" title="贤心博客"><img src="./手机 移动前端开发需要注意的20个要点_files/xin.gif" alt="贤心"></a>
+        <ul class="footer_me">
+            <li>贤心，自由职业者。这不是一个人的博客。</li>
+            <li><a href="http://sentsin.com/web/197.html">广告合作</a> - 站长邮箱：xu@sentsin.com</li>
+            <li><a href="http://weibo.com/SentsinXu" target="_blank">新浪微博</a>：<a href="http://weibo.com/SentsinXu" target="_blank">http://weibo.com/SentsinXu</a>
+</li>
+            <li><a href="http://sentsin.com/sitemap.xml">Sitemap</a> | 小众前端一枚，小众前端一枚</li>
+            <li>
+                <a href="http://say.sentsin.com/">Say前端技术论坛</a> 
+                <a href="http://sentsin.com/web/">前端开发</a> 
+                <a href="http://sentsin.com/mood/">轻微博</a>
+            </li>
+            <li>2011-3011  © sentsin.com <a href="javascript:;" onclick="paysentsin()">友情赞助</a></li>
+        </ul>
+        <ul class="ul footerLiuyan" id="liuyan"></ul>
+        <em id="eig_top"><i class="icon_old"></i>TOP</em>
+    </div>
+</div>
+<script async="" src="./手机 移动前端开发需要注意的20个要点_files/adsbygoogle.js"></script>
+<script src="./手机 移动前端开发需要注意的20个要点_files/sea.js"></script>
+<script>seajs.use('public');</script>
+
+<script id="bdshare_js" data="type=tools&amp;uid=139216" src="./手机 移动前端开发需要注意的20个要点_files/bds_s_v2.js"></script>
+
+<script>
+var bds_config = {'snsKey': {'tsina': '1090010962'}, 'bdText':'手机/移动前端开发需要注意的20个要点'};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<script src="./手机 移动前端开发需要注意的20个要点_files/c.php"></script>
+
+
+
+</body></html>

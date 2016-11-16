@@ -1,0 +1,27 @@
+*{margin: 0;
+  padding: 0;}
+
+
+div.img1{width: 641px;
+  height: 301px;
+  position: relative;}
+
+div.img1 img{width: 641px;
+  height: 301px;
+  position: relative;}
+
+div.img1 div.qing{width: 191px;
+  height: 301px;
+  background-color: #20b2aa;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;}
+
+div.img1 div.hong{width: 191px;
+  height: 301px;
+  background-color: #20b2aa;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;}

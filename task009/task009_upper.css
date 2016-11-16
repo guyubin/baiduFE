@@ -1,0 +1,17 @@
+.upper{height: 31px;
+  background-color: #ffffff;}
+
+.upper p{font-size: 12px;
+  font-family: SimHei;
+  color: #b7b7b7;
+  line-height: 31px;
+  text-indent: 31px;}
+
+.upper p span{color: #6e9cc4;}
+
+.upper p span.no1{margin-left: 12px;
+  margin-right: 6px;}
+.upper p span.no2{margin-left: 6px;
+  margin-right: 6px;}
+.upper p span.no3{margin-left: 6px;
+  margin-right: 6px;}

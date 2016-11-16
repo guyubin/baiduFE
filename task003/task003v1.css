@@ -1,0 +1,62 @@
+/********************/
+*{
+  margin: 0;
+  padding: 0;
+ }
+
+*{ font-family: "Microsoft YaHei"; }
+
+img{
+  width: 80px;
+  height: 80px;
+}
+
+img.single{
+  float: left;
+  margin: 20px;
+}
+#sidebarr img{
+  padding: 10px 20px 10px 20px;
+}
+#sidebarr #first{
+  margin-top: 10px;
+}
+#sidebarr #last{
+  margin-bottom: 10px;
+}
+
+#main{
+  border: 1px solid #999;
+  background-color: #eee;
+  margin: 20px;
+  overflow: auto;
+}
+
+#sidebarl{
+  float: left;
+  width: 200px;
+  margin: 20px;
+  border: 1px solid #999;
+  background-color: white;
+ }
+
+#sidebarr{
+  float:right;
+  width: 120px;
+  margin: 20px;
+  border: 1px solid #999;
+  background-color: white;
+ }
+
+#content{
+  margin-left: 240px;
+  margin-right: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #999;
+  background-color: white;
+ }
+
+#sidebarl p{margin-top: 20px; }
+
+#content p{margin: 20px;}
