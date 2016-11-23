@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task020</title>
+</head>
+<style media="screen">
+    .button-left-in {
+        background-color: transparent;
+        border: solid 1px grey;
+        border-radius: 16%;
+    }
+
+    .button-right-in {
+        background-color: transparent;
+        border: solid 1px grey;
+        border-radius: 16%;
+    }
+
+    .button-left-out {
+        background-color: transparent;
+        border: solid 1px grey;
+        border-radius: 16%;
+        margin-left: 20px;
+    }
+
+    .button-right-out {
+        background-color: transparent;
+        border: solid 1px grey;
+        border-radius: 16%;
+    }
+
+    .container {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .number-item {
+        display: inline-block;
+        background: red;
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+    .black-outline {
+        outline: 1px solid black;
+    }
+</style>
+
+<body>
+    <textarea id="id-input" type="text" name="name" value=""></textarea>
+
+    <button class="button-left-in" type="button" name="button">左侧入</button>
+    <button class="button-right-in" type="button" name="button">右侧入</button>
+    <button class="button-left-out" type="button" name="button">左侧出</button>
+    <button class="button-right-out" type="button" name="button">右侧出</button>
+
+    <input id="id-query-input" type="text" name="" value="">
+    <button class="button-query" type="button" name="button">查询</button>
+
+    <div class="container">
+        <!-- <div class="number-item">
+                1
+            </div> -->
+        <!-- <div class="number-item">
+            2
+        </div>
+        <div class="number-item">
+            3
+        </div>
+        <div class="number-item">
+            4
+        </div> -->
+    </div>
+
+    <script type="text/javascript">
+        var log = function() {
+            console.log.apply(console, arguments)
+        }
+
+        var bindEventToTextArea = function() {
+            var textarea = document.querySelector('#id-input')
+            textarea.addEventListener('keydown', function(event) {
+                if (event.keyCode === 9) {
+                    event.preventDefault()
+                    var text = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd)
+                    textarea.value = textarea.value.substring(0, textarea.selectionStart) + '\t' + textarea.value.substring(textarea.selectionEnd)
+                }
+            })
+        }
+
+        var getInputValue = function() {
+            var input = document.querySelector('#id-input')
+            var inputValue = input.value
+
+            var strArray = inputValue.split('')
+            log('strArray', strArray)
+            var strArray1 = []
+            var flag = true
+            for (var i = 0; i < strArray.length; i++) {
+                if ((strArray[i] === '\n') || (strArray[i] === ' ') || (strArray[i] === '\t')
+                        || (strArray[i] === ',') || (strArray[i] === '、') || (strArray[i] === '，')) {
+                    flag = false
+                } else {
+                    if (flag === false) {
+                        strArray1.push(',')
+                        strArray1.push(strArray[i])
+                        flag = true
+                    } else {
+                        strArray1.push(strArray[i])
+                    }
+                }
+            }
+
+            var str = strArray1.join('')
+            str = str.trim()
+            if (str[0] === ',') {
+                str = str.slice(1)
+            }
+            var strArray1 = str.split(',')
+
+            return strArray1
+            // var inputNumber = Number(inputValue)
+            //     // log('inputNumber', inputNumber, typeof inputNumber)
+            // if (inputNumber) {
+            //     // log('true')
+            //     input.value = ''
+            //     return inputNumber
+            // } else {
+            //     alert('illegal input')
+            //     input.value = ''
+            //     return null
+            // }
+        }
+
+        var insertNewValue = function(value, where) {
+            container = document.querySelector('.container')
+            for (var i = 0; i < value.length; i++) {
+                var t = `
+                <div class="number-item">
+                    ${value[i]}
+                </div>
+                `
+
+                if (where === 'left') {
+                    container.insertAdjacentHTML('afterbegin', t)
+                } else {
+                    container.insertAdjacentHTML('beforeend', t)
+                }
+            }
+        }
+
+        var bindEventToLeftIn = function() {
+            var buttonLeftIn = document.querySelector('.button-left-in')
+            buttonLeftIn.addEventListener('click', function(event) {
+                // 获取输入值，并检验是否合法
+                var inputValue = getInputValue()
+                if (inputValue !== null) {
+                    // 左侧插入新值
+                    insertNewValue(inputValue, 'left')
+                }
+            })
+        }
+
+        var bindEventToRightIn = function() {
+            var buttonRightIn = document.querySelector('.button-right-in')
+            buttonRightIn.addEventListener('click', function(event) {
+                // 获取输入值，并检验是否合法
+                var inputValue = getInputValue()
+                if (inputValue !== null) {
+                    // 左侧插入新值
+                    insertNewValue(inputValue, 'right')
+                }
+            })
+        }
+
+        var bindEventToLeftOut = function() {
+            var buttonLeftOut = document.querySelector('.button-left-out')
+            buttonLeftOut.addEventListener('click', function(event) {
+                // 取得第一个元素
+                var items = document.querySelectorAll('.number-item')
+                var leftOut = items[0]
+                var leftOutNumber = leftOut.innerHTML
+                leftOut.remove()
+                alert(`pop out: ${leftOutNumber}`)
+            })
+        }
+
+        var bindEventToRightOut = function() {
+            var buttonRightOut = document.querySelector('.button-right-out')
+            buttonRightOut.addEventListener('click', function(event) {
+                // 取得第一个元素
+                var items = document.querySelectorAll('.number-item')
+                var RightOut = items[items.length - 1]
+                var RightOutNumber = RightOut.innerHTML
+                RightOut.remove()
+                alert(`pop out: ${RightOutNumber}`)
+            })
+        }
+
+        var bindEventToItems = function() {
+            var container = document.querySelector('.container')
+            container.addEventListener('click', function(event) {
+                var target = event.target
+                if (target.classList.contains('number-item')) {
+                    target.remove()
+                }
+            })
+        }
+
+        var handleWord = function(word) {
+            var strArray = word.split('')
+            var strArray1 = []
+            var flag = true
+            for (var i = 0; i < strArray.length; i++) {
+                if ((strArray[i] === '\n') || (strArray[i] === ' ')) {
+                    flag = false
+                } else {
+                    if (flag === false) {
+                        strArray1.push(',')
+                        strArray1.push(strArray[i])
+                        flag = true
+                    } else {
+                        strArray1.push(strArray[i])
+                    }
+                }
+            }
+
+            var str = strArray1.join('')
+            str = str.trim()
+            if (str[0] === ',') {
+                str = str.slice(1)
+            }
+            return str
+        }
+
+        var bindEventToQuery = function() {
+            var queryInput = document.querySelector('#id-query-input')
+            var queryButton = document.querySelector('.button-query')
+            queryButton.addEventListener('click', function() {
+                var queryWord = queryInput.value
+                var items = document.querySelectorAll('.number-item')
+                var itemsWord = []
+                for (var i = 0; i < items.length; i++) {
+                    itemsWord.push(handleWord(items[i].innerHTML))
+                }
+
+                // find the index of all the relative items
+                var indexArray = []
+                for (var i = 0; i < itemsWord.length; i++) {
+                    if (itemsWord[i].includes(queryWord)) {
+                        log('true')
+                        indexArray.push(i)
+                    }
+                }
+                // render the relative item
+                for (var i = 0; i < indexArray.length; i++) {
+                    items[indexArray[i]].classList.add('black-outline')
+                }
+                // a b c d e 少女 妇女 male
+                queryInput.value = ''
+            })
+        }
+
+        var __main = function() {
+            bindEventToTextArea()
+            bindEventToLeftIn()
+            bindEventToRightIn()
+            bindEventToLeftOut()
+            bindEventToRightOut()
+            bindEventToItems()
+            bindEventToQuery()
+        }
+
+        __main()
+    </script>
+</body>
+
+</html>
