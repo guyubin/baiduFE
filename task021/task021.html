@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task021</title>
+</head>
+<style media="screen">
+    span.span-tag {
+        font-size: xx-large;
+        font-family: fantasy;
+    }
+
+    .div-tag {
+        display: flex;
+        align-items: center;
+    }
+
+    #id-input-tag {
+        margin-left: 10px;
+    }
+
+    .div-hobby {
+        margin-top: 60px;
+    }
+
+    .tag-item {
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        color: white;
+    }
+
+    .red-background {
+        background-color: red;
+    }
+
+    button.button-confirm {
+        display: block;
+        border: 1px black solid;
+        border-radius: 14%;
+        background: transparent;
+        margin-top: 5px;
+    }
+
+    .hobby-item {
+        display: inline-block;
+        height: 30px;
+        background: red;
+        line-height: 30px;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="div-tag">
+        <span class="span-tag">Tag:</span>
+
+        <input id="id-input-tag" type="text" name="" value="">
+    </div>
+    <div class="div-tag-container">
+        <!-- <div class="tag-item">
+            HTML5
+        </div> -->
+    </div>
+
+    <div class="div-hobby">
+
+        <textarea id="id-input-hobby" type="text" name="name" value=""></textarea>
+
+        <button class="button-confirm" type="button" name="button">确认兴趣爱好</button>
+
+        <div class="div-hobby-container">
+            <!-- <div class="hobby-item">
+                游泳
+            </div> -->
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var log = function() {
+                console.log.apply(console, arguments)
+            }
+            // 令一个对象表示 Tag
+        var TagObject = {
+            tags: [],
+            maxlength: 10,
+        }
+
+        TagObject.insertNewValue = function(value) {
+            var container = document.querySelector('.div-tag-container')
+            var tagItems = document.querySelectorAll('.tag-item')
+            for (var i = 0; i < tagItems.length; i++) {
+                tagItems[i].remove()
+            }
+            for (var i = 0; i < value.length; i++) {
+                var t = `
+                <div class="tag-item">
+                    ${value[i]}
+                </div>
+                `
+
+                container.insertAdjacentHTML('afterbegin', t)
+            }
+        }
+
+        TagObject.unique = function(a) {
+            /*
+            a 是一个 array
+        	返回一个 array, 包含了 a 中所有元素, 且不包含重复元素
+            例如 a 是 [1, 2, 3, 1, 3, 5]
+            返回 [1, 2, 3, 5]
+            */
+            var len = a.length
+            var aReturn = new Array()
+            for (var i = 0; i < len; i++) {
+                if (!(aReturn.includes(a[i]))) {
+                    aReturn.push(a[i])
+                }
+            }
+
+            return aReturn
+        }
+
+        TagObject.bindEventToInput = function() {
+            var input = document.querySelector('#id-input-tag')
+            input.addEventListener('input', (function(event) {
+                var value = input.value
+                if (value[value.length - 1] === ' ' || value[value.length - 1] === ',') {
+                    var returnValue = value.substring(0, value.length - 1)
+                    if (returnValue !== '') {
+                        this.tags = this.tags.concat(returnValue)
+                    }
+                    this.tags = TagObject.unique(this.tags)
+                    log(this.tags)
+
+                    input.value = ''
+
+                    if (this.tags.length > this.maxlength) {
+                        var more = this.tags.length - this.maxlength
+                        this.tags.splice(0, more)
+                    }
+
+                    if (this.tags !== null) {
+                        TagObject.insertNewValue(this.tags)
+                    }
+                }
+            }).bind(this))
+
+            input.addEventListener('keydown', (function(event) {
+                if (event.keyCode === 13) {
+                    log('enter')
+                    var value = input.value
+                    log('value', value, value.length)
+
+                    var returnValue = value
+                    if (returnValue !== '') {
+                        this.tags = this.tags.concat(returnValue)
+                    }
+                    this.tags = TagObject.unique(this.tags)
+                    log(this.tags)
+
+                    input.value = ''
+
+                    if (this.tags.length > this.maxlength) {
+                        var more = this.tags.length - this.maxlength
+                        this.tags.splice(0, more)
+                    }
+
+                    if (this.tags !== null) {
+                        TagObject.insertNewValue(this.tags)
+                    }
+
+                }
+            }).bind(this))
+        }
+
+        TagObject.bindEventToItems = function() {
+            var container = document.querySelector('.div-tag-container')
+            container.addEventListener('mouseover', function(event) {
+                log('mouseover')
+                log('event.currentTarget', event.currentTarget)
+                log('relatedTarget', event.relatedTarget)
+                var target = event.target
+                if (target.classList.contains('tag-item')) {
+                    target.innerHTML = '点击删除' + target.innerHTML
+                    target.classList.add('red-background')
+                }
+
+
+            })
+            container.addEventListener('mouseout', function(event) {
+                log('mouseout')
+                var target = event.target
+                if (target.classList.contains('tag-item')) {
+                    target.innerHTML = target.innerHTML.substring(4)
+                    target.classList.remove('red-background')
+                }
+
+            })
+            container.addEventListener('click', function(event) {
+                var target = event.target
+                if (target.classList.contains('tag-item')) {
+                    target.remove()
+                    var value = target.innerHTML.trim()
+                    var index = TagObject.tags.indexOf(value)
+                    TagObject.tags.splice(index, 1)
+                }
+            })
+        }
+
+        // 令一个对象表示 textarea 代表的输入和输出
+        var textareaObject = {
+            hobby: [],
+            maxlength: 10,
+        }
+
+        textareaObject.bindEventToTextArea = function() {
+            var textarea = document.querySelector('#id-input-hobby')
+            textarea.addEventListener('keydown', function(event) {
+                if (event.keyCode === 9) {
+                    event.preventDefault()
+                    var text = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd)
+                    textarea.value = textarea.value.substring(0, textarea.selectionStart) + '\t' + textarea.value.substring(textarea.selectionEnd)
+                }
+            })
+        }
+
+        textareaObject.getInputValue = function() {
+            var input = document.querySelector('#id-input-hobby')
+            var inputValue = input.value
+            input.value = ''
+            var strArray = inputValue.split('')
+            log('strArray', strArray)
+            var strArray1 = []
+            var flag = true
+            for (var i = 0; i < strArray.length; i++) {
+                if ((strArray[i] === '\n') || (strArray[i] === ' ') || (strArray[i] === '\t') ||
+                    (strArray[i] === ',') || (strArray[i] === '、') || (strArray[i] === '，')) {
+                    flag = false
+                } else {
+                    if (flag === false) {
+                        strArray1.push(',')
+                        strArray1.push(strArray[i])
+                        flag = true
+                    } else {
+                        strArray1.push(strArray[i])
+                    }
+                }
+            }
+
+            var str = strArray1.join('')
+            str = str.trim()
+            if (str[0] === ',') {
+                str = str.slice(1)
+            }
+            var strArray1 = str.split(',')
+            if (strArray1[0] === '') {
+                return null
+            }
+            return strArray1
+        }
+
+        textareaObject.insertNewValue = function(value) {
+            var container = document.querySelector('.div-hobby-container')
+            var hobbyItems = document.querySelectorAll('.hobby-item')
+            for (var i = 0; i < hobbyItems.length; i++) {
+                hobbyItems[i].remove()
+            }
+            for (var i = 0; i < value.length; i++) {
+                var t = `
+                <div class="hobby-item">
+                    ${value[i]}
+                </div>
+                `
+
+                container.insertAdjacentHTML('afterbegin', t)
+            }
+        }
+
+        textareaObject.unique = function(a) {
+            /*
+            a 是一个 array
+        	返回一个 array, 包含了 a 中所有元素, 且不包含重复元素
+            例如 a 是 [1, 2, 3, 1, 3, 5]
+            返回 [1, 2, 3, 5]
+            */
+            var len = a.length
+            var aReturn = new Array()
+            for (var i = 0; i < len; i++) {
+                if (!(aReturn.includes(a[i]))) {
+                    aReturn.push(a[i])
+                }
+            }
+
+            return aReturn
+        }
+
+        textareaObject.bindEventToConfirm = function() {
+            var buttonConfirm = document.querySelector('.button-confirm')
+            buttonConfirm.addEventListener('click', (function(event) {
+                // 获取输入值，并检验是否合法
+                var inputValue = textareaObject.getInputValue()
+                log('inputValue', inputValue)
+                log('this.hobby', this.hobby)
+                if (inputValue !== null) {
+                    this.hobby = this.hobby.concat(inputValue)
+                        // 作去重工作
+                    this.hobby = textareaObject.unique(this.hobby)
+                }
+                if (this.hobby.length > this.maxlength) {
+                    var more = this.hobby.length - this.maxlength
+                    this.hobby.splice(0, more)
+                }
+                if (this.hobby !== null) {
+                    log('this.hobby', this.hobby)
+                    textareaObject.insertNewValue(this.hobby)
+                }
+
+            }).bind(this))
+        }
+
+        textareaObject.bindEventToItems = function() {
+            var container = document.querySelector('.div-hobby-container')
+            container.addEventListener('click', function(event) {
+                var target = event.target
+                if (target.classList.contains('hobby-item')) {
+                    target.remove()
+                    var value = target.innerHTML.trim()
+                    var index = textareaObject.hobby.indexOf(value)
+                    textareaObject.hobby.splice(index, 1)
+                }
+            })
+        }
+
+        var __main = function() {
+            TagObject.bindEventToInput()
+            TagObject.bindEventToItems()
+            textareaObject.bindEventToTextArea()
+            textareaObject.bindEventToConfirm()
+            textareaObject.bindEventToItems()
+        }
+
+        __main()
+    </script>
+</body>
+
+</html>
