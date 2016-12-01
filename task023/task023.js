@@ -34,7 +34,9 @@ var setAnimation = function() {
 
 var preOrder = function(node) {
     if (node !== null && node.nodeType === 1) {
-        NodeTraversalList.push(node)
+        if (!(NodeTraversalList.includes(node))) {
+            NodeTraversalList.push(node)
+        }
         var list = node.childNodes
         for (var i = 0; i < list.length; i++) {
             preOrder(list[i])
@@ -90,7 +92,7 @@ var setAnimationQuery = function(queryValue) {
 
     var animationID = setInterval(function() {
         if (NowIndex < len && flag === false) {
-            log()
+            log('NowIndex', NowIndex, 'flag', flag,'len',len)
             NodeTraversalList[NowIndex].style.backgroundColor = 'blue'
             if (NowIndex - 1 >= 0) {
                 NodeTraversalList[NowIndex - 1].style.backgroundColor = 'white'
@@ -109,6 +111,7 @@ var setAnimationQuery = function(queryValue) {
                     NodeTraversalList[NowIndex].style.backgroundColor = 'white'
                 }, 5000)
             } else {
+                log(1)
                 clearInterval(animationID)
                 NodeTraversalList[len - 1].style.backgroundColor = 'white'
                 alert('no match')
