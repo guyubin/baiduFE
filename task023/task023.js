@@ -60,29 +60,59 @@ var bindEventToButtonPrev = function() {
     })
 }
 
-for (var i = 0; i < node.childNodes.length; i++) {
-if (node.childNodes[i].nodeType === 3) {
-console.log(node.childNodes[i])
-console.log(node.childNodes[i].length)
-console.log(node.childNodes[i].nodeValue.trim().length)
-}
+// for (var i = 0; i < node.childNodes.length; i++) {
+// if (node.childNodes[i].nodeType === 3) {
+// console.log(node.childNodes[i])
+// console.log(node.childNodes[i].length)
+// console.log(node.childNodes[i].nodeValue.trim().length)
+// }
+// }
+
+var valueMatch = function(value, node) {
+    var len = node.childNodes.length
+    for (var i = 0; i < len; i++) {
+        if (node.childNodes[i].nodeType === 3) {
+            var str = node.childNodes[i].nodeValue.trim()
+            if (value === str) {
+                return true
+            }
+        }
+    }
+
+    return false
 }
 
-var setAnimationQuery = function() {
+var setAnimationQuery = function(queryValue) {
     var len = NodeTraversalList.length
+    var value = queryValue
     var flag = false
     var NowIndex = 0
+
     var animationID = setInterval(function() {
         if (NowIndex < len && flag === false) {
+            log()
             NodeTraversalList[NowIndex].style.backgroundColor = 'blue'
             if (NowIndex - 1 >= 0) {
                 NodeTraversalList[NowIndex - 1].style.backgroundColor = 'white'
             }
-            if (NodeTraversalList[NowIndex].)
-            NowIndex++
+            if (valueMatch(value, NodeTraversalList[NowIndex])) {
+                flag = true
+            } else {
+                NowIndex++
+            }
         } else {
-            clearInterval(animationID)
-            NodeTraversalList[len - 1].style.backgroundColor = 'white'
+            if (flag === true) {
+                clearInterval(animationID)
+                NodeTraversalList[len - 1].style.backgroundColor = 'white'
+                NodeTraversalList[NowIndex].style.backgroundColor = 'red'
+                setTimeout(function(){
+                    NodeTraversalList[NowIndex].style.backgroundColor = 'white'
+                }, 5000)
+            } else {
+                clearInterval(animationID)
+                NodeTraversalList[len - 1].style.backgroundColor = 'white'
+                alert('no match')
+            }
         }
     }, 500)
 
@@ -92,8 +122,10 @@ var bindEventToButtonQuery = function() {
     var buttonQuery = document.querySelector('.button-query')
     buttonQuery.addEventListener('click', function() {
         // 动画查找过程
+        var input = document.querySelector('#id-input-query')
+        var inputValue = input.value
         preOrderList()
-        setAnimationQuery()
+        setAnimationQuery(inputValue)
     })
 }
 
