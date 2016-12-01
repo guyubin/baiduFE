@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task024</title>
+    <style media="screen">
+        .level1 {
+            width: 80%;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            background-color: white;
+        }
+
+        .level2 {
+            border: 1px solid black;
+            display: flex;
+            flex-grow: 1;
+            margin: 5px;
+            background-color: white;
+        }
+
+        .level3 {
+            border: 1px solid black;
+            display: flex;
+            flex-grow: 1;
+            margin: 5px;
+            background-color: white;
+        }
+
+        .level4 {
+            border: 1px solid black;
+            margin: 5px;
+            display: flex;
+            flex-grow: 1;
+            background-color: white;
+        }
+
+        .level5 {
+            border: 1px solid black;
+            margin: 5px;
+            display: flex;
+            flex-grow: 1;
+            background-color: white;
+        }
+
+        .div-control {
+            margin: 20px;
+        }
+
+        button {
+            border: 1px solid black;
+            background: red;
+            margin: 10px;
+        }
+
+        .div-select {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="level1">
+        super
+        <div class="level2">
+            car
+            <div class="level3">
+                apple
+                <div class="level4">
+                    pear
+                </div>
+                <div class="level4">
+                    pig
+                </div>
+                <div class="level4">
+                    cola
+                </div>
+                <div class="level4">
+                    soccer
+                </div>
+            </div>
+            <div class="level3">
+                phone
+            </div>
+            <div class="level3">
+                <div class="level4">
+                    book
+                </div>
+                <div class="level4">
+                    school
+                </div>
+            </div>
+        </div>
+        <div class="level2">
+            note
+            <div class="level3">
+                human
+                <div class="level4">
+                    code
+                </div>
+                <div class="level4">
+                    operate
+                </div>
+                <div class="level4">
+                    man
+                </div>
+            </div>
+            <div class="level3">
+                program
+                <div class="level4">
+                    bement
+                    <div class="level5">
+                        cat
+                    </div>
+                </div>
+                <div class="level4">
+                    glass
+                </div>
+            </div>
+        </div>
+        <div class="level2">
+            fish
+        </div>
+    </div>
+
+    <div class="div-control">
+        <button class="button-prev" type="button" name="button">开始遍历</button>
+        <br/>
+        <input id="id-input-query" type="text" name="" value="">
+        <button class="button-query" type="button" name="button">查询</button>
+        <br/>
+        <button class="button-delete" type="button" name="button">删除</button>
+        <br/>
+        <input id="id-input-add" type="text" name="" value="">
+        <button class="button-add" type="button" name="button">添加</button>
+    </div>
+
+    <script type="text/javascript" src="task024.js"></script>
+</body>
+
+</html>
