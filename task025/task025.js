@@ -4,7 +4,12 @@ var log = function() {
 
 // 所有的不是最低级的 div 元素集合
 var UpperDivNodes = []
+//
 var AllDivs = []
+//
+var queryResult = []
+//
+var queryResultUpper = []
 
 var hasDivNodes = function(node) {
     var flag = false
@@ -192,8 +197,104 @@ var addAndDeleteNode = function() {
     addContent()
 }
 
+var getStr = function(node) {
+    for (var i = 0; i < node.childNodes.length; i++) {
+        if (node.childNodes[i].nodeType === 3) {
+            if (node.childNodes[i].nodeValue.trim() !== '') {
+                return node.childNodes[i].nodeValue
+            }
+        }
+    }
+
+    return ''
+}
+
+var getUpper = function(node) {
+    if (node !== AllDivs[0]) {
+        queryResultUpper.push(node)
+        getUpper(node.parentElement)
+    } else {
+        queryResultUpper.push(node)
+        return
+    }
+}
+
 var queryNode = function() {
-    
+    var queryButton = document.querySelector('.button-query')
+    queryButton.addEventListener('click', function() {
+        // 清空查询数组
+        queryResult.length = 0
+        // 取得查询值
+        var input = document.querySelector('#id-input-query')
+        var inputValue = input.value
+        input.value = ''
+
+
+        // var span = AllDivs[0].querySelector('span')
+        // log('span', span)
+        // var str = getStr(span)
+        // log(str)
+
+        // 在所有div 中进行查询
+        for (var i = 0; i < AllDivs.length; i++) {
+            var span = AllDivs[i].querySelector('span')
+            var str = getStr(span)
+            if (inputValue === str) {
+                queryResult.push(AllDivs[i])
+                span.style.color = 'red'
+            }
+        }
+        if (queryResult.length === 0) {
+            alert('no result')
+        }
+        //
+        queryResultUpper.length = 0
+        for (var i = 0; i < queryResult.length; i++) {
+            getUpper(queryResult[i])
+        }
+        //
+
+        // open
+        for (var i = 0; i < queryResultUpper.length; i++) {
+            var nodeTemp = queryResultUpper[i]
+            log(nodeTemp)
+            if (nodeTemp.classList.contains('invisible')) {
+                nodeTemp.classList.remove('invisible')
+            } else {}
+            var children = nodeTemp.childNodes
+            log(children)
+            for (var n = 0; n < children.length; n++) {
+                if (children[n].tagName === 'DIV' && children[n].classList.contains('invisible')) {
+                    children[n].classList.remove('invisible')
+                }
+            }
+
+            var span = nodeTemp.querySelector('span')
+            var icon = span.querySelector('i')
+            if (icon.classList.contains('fa-folder')) {
+                icon.classList.remove('fa-folder')
+                icon.classList.add('fa-folder-open')
+            } else if (icon.classList.contains('fa-folder-open')) {
+
+            }
+
+
+                //
+                // var d = target.closest('div')
+                // if (UpperDivNodes.includes(d)) {
+                //     // 找到该元素的直接子元素 子元素为 div，改为显示
+                //     var children = d.childNodes
+                //     for (var i = 0; i < children.length; i++) {
+                //         if (children[i].tagName === 'DIV' && children[i].classList.contains('invisible')) {
+                //             children[i].classList.remove('invisible')
+                //         }
+                //     }
+                // }
+                // // 改变文件夹的显示形态
+                // icon.classList.remove('fa-folder')
+                // icon.classList.add('fa-folder-open')
+        }
+    })
 }
 
 var __main = function() {
