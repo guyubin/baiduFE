@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>task025</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <style media="screen">
+        /** {
+            outline: 1px dashed red;
+        }*/
+
+        .level1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .level2 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .level3 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .level4 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .level5 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        /*****************************************/
+
+        .invisible {
+            display: none;
+        }
+
+        span {
+            width: 120px;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+
+        .fa-plus, .fa-times{
+            display: none;
+        }
+
+        .fa-plus:hover, .fa-times:hover{
+            cursor: pointer;
+        }
+
+        span:hover>.fa-plus, span:hover>.fa-times{
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div class="div-control">
+            <input id="id-input-query" type="text" name="" value="">
+            <button class="button-query" type="button" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <br/>
+            <span class="query-result">super</span>
+            <br/>
+            <!-- 把添加做成弹窗吧 -->
+        </div>
+        <p id="id-query-result"></p>
+        <i class="fa fa-folder" aria-hidden="true"></i>
+        <i class="fa fa-folder-open" aria-hidden="true"></i>
+        <div class="level1">
+            <span>super</span>
+            <div class="level2">
+                <span>car</span>
+                <div class="level3">
+                    <span>apple</span>
+                    <div class="level4">
+                        <span>pear</span>
+                    </div>
+                    <div class="level4">
+                        <span>pig</span>
+                    </div>
+                    <div class="level4">
+                        <span>cola</span>
+                    </div>
+                    <div class="level4">
+                        <span>soccer</span>
+                    </div>
+                </div>
+                <div class="level3">
+                    <span>phone</span>
+                </div>
+                <div class="level3">
+                    <span></span>
+                    <div class="level4">
+                        <span>book</span>
+                    </div>
+                    <div class="level4">
+                        <span>school</span>
+                    </div>
+                </div>
+            </div>
+            <div class="level2">
+                <span>note</span>
+                <div class="level3">
+                    <span>human</span>
+                    <div class="level4">
+                        <span>code</span>
+                    </div>
+                    <div class="level4">
+                        <span>operate</span>
+                    </div>
+                    <div class="level4">
+                        <span>man</span>
+                    </div>
+                </div>
+                <div class="level3">
+                    <span>program</span>
+                    <div class="level4">
+                        <span>bement</span>
+                        <div class="level5">
+                            <span>cat</span>
+                        </div>
+                    </div>
+                    <div class="level4">
+                        <span>glass</span>
+                    </div>
+                </div>
+            </div>
+            <div class="level2">
+                <span>fish</span>
+            </div>
+        </div>
+
+    </fieldset>
+
+
+    <script type="text/javascript" src="task025.js"></script>
+</body>
+
+</html>
