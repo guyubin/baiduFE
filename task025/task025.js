@@ -244,8 +244,17 @@ var queryNode = function() {
                 span.style.color = 'red'
             }
         }
+        var queryResultAlert = document.querySelector('.query-result')
         if (queryResult.length === 0) {
-            alert('no result')
+            var template = `
+            there is ${queryResult.length} result
+            `
+            queryResultAlert.innerHTML = template
+        } else {
+            var template = `
+            there is ${queryResult.length} results
+            `
+            queryResultAlert.innerHTML = template
         }
         //
         queryResultUpper.length = 0
